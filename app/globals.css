@@ -5,7 +5,7 @@
 @fontface {
     font-family: "Exo 2", sans-serif;
     src: url("https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap")
-  }
+}
 
 * {
     padding: 0;
@@ -28,26 +28,50 @@ body {
 }
 
 @keyframes scrollX {
-from {
-    left: translateX(0)
-}
+    from {
+        left: translateX(0)
+    }
 
-to {
-    transform: translateX(calc(-100% - 0.1vw));
-}
+    to {
+        transform: translateX(calc(-100% - 0.1vw));
+    }
 }
 
 
 .child1 {
-    animation: scrollX 20s linear infinite;
-}
-.child2 {
-    animation: scrollX 20s linear infinite reverse;
+    animation: scrollX 25s linear infinite;
 }
 
-.text1{
+.child2 {
+    animation: scrollX 25s linear infinite reverse;
+}
+
+.text1 {
     -webkit-text-stroke: 2px rgba(36, 162, 201, 0.459);
     color: transparent;
     font-family: "Exo 2", sans-serif;
 }
 
+.login::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fdc009;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: all 0.4s linear;
+    z-index: -1;
+}
+
+.login:hover::before {
+    transform: translateX(0);
+}
+
+.arrowflip {
+    rotate: 180deg;
+    position: absolute;
+    top: 47.5%;
+    transition: all 0.5s linear;
+}

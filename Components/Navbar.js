@@ -1,0 +1,96 @@
+"use client"
+import { motion } from 'framer-motion'
+// import Link from 'next/link'
+import React, { useState } from 'react'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faPhone, faCartShopping, faHeart, faMobileScreen, faComments, faHouse, faList, faCertificate, faAward, faPercent, faLightbulb, faTruckFast, faBell, faStar, faAnglesLeft } from '@fortawesome/free-solid-svg-icons'
+
+
+
+
+const Navbar = () => {
+ 
+  const [state, setState] = useState(0)
+  function btnClick() {
+    if (state === 0) {
+      document.querySelector('.nav')
+        .style.width = "15vw"
+      // document.querySelector(".lists").style.opacity = 1
+      document.querySelector(".overlay").style.display = "block"
+      document.querySelector(".divv").style.opacity = 1
+      document.querySelector(".div1").style.opacity = 1
+      document.querySelector(".div2").style.opacity = 1
+      document.querySelector(".div3").style.opacity = 1
+      document.getElementById('#arrow').classList.add("arrowflip")
+      setState(1)
+    }
+    else {
+      document.querySelector('.nav').style.width = "0vw"
+      // document.querySelector(".lists").style.opacity = 0
+      document.querySelector(".overlay").style.display = "none"
+      document.querySelector(".divv").style.opacity = 0
+      document.querySelector(".div1").style.opacity = 0
+      document.querySelector(".div2").style.opacity = 0
+      document.querySelector(".div3").style.opacity = 0
+      document.getElementById('#arrow').classList.remove("arrowflip")
+      setState(0)
+    }
+  }
+  return (
+    <div style={{ transition: "width .8s" }} className='nav w-0 absolute right-0 h-[100vh] bg-gray-900 z-30 text-centers rounded-tl-xl rounded-bl-xl grid grid-rows-[20%_29%_29%_22%] select-none'>
+      <div style={{ transition: "opacity .5s" }} className='divv relative flex-col pl-6 pr-6 pt-3'>
+        <span className='absolute text-slate-300 text-sm'>Hello,</span>
+        <FontAwesomeIcon icon={faBell} className='absolute right-5 top-4 text-md text-slate-500' />
+        <button className="login relative top-9 text-slate-100 bg-transparent rounded-md p-2 border border-slate-300 text-xs uppercase hover:text-black font-semibold overflow-hidden">Login / Sigup</button>
+        <p className='absolute w-[10.5vw] top-[6.3vw] text-slate-400 text-[0.73vw] text-start'>Login/SignUp to manage your account.</p>
+      </div>
+
+      <div style={{ transition: "opacity .5s" }} className='div1 w-full relative flex-cols pt-3 boorder border-t-[0.1vw] border-gray-800 pl-6'>
+        <input placeholder='Search for products..' type="search" name="Search" id="Search" className=' absolute searchbar w-[79%] h-[2vw] rounded-xl outline-none pl-8 text-sm placeholder:text-xs mb-2 ' />
+        <FontAwesomeIcon icon={faMagnifyingGlass} className='absolute left-8 top-[1.4vw] text-sm text-slate-500' />
+        
+          <h1 className='absolute left-[4vw] top-[4vw] text-[1vw] text-slate-100'>Cart</h1>
+          <FontAwesomeIcon icon={faCartShopping} className='absolute top-[4.2vw] text-[1.1vw] text-slate-500' />
+          <h1 className='absolute left-[4vw] top-[6vw]  text-[1vw] text-slate-100'>Wishlist</h1>
+          <FontAwesomeIcon icon={faHeart} className='absolute top-[6.1vw] text-[1.1vw] text-slate-500' />
+          <h1 className='absolute left-[4vw] top-[7.9vw]  text-[1vw] text-slate-100'>Track Orders</h1>
+          <FontAwesomeIcon icon={faTruckFast} className='absolute top-[8vw] text-[1.1vw] text-slate-500' />
+      
+
+        <FontAwesomeIcon icon={faMobileScreen} className='absolute left-8 top-[10.6vw] text-md text-slate-500' />
+        <button className="login  absolute top-[10vw] text-slate-100 bg-transparent rounded-md p-2 pl-7 border border-slate-300 text-xs uppercase hover:text-black font-semibold overflow-hidden">Download the app</button>
+      </div>
+
+      <div style={{ transition: "opacity .5s" }} className='div2 w-full relative border border-t-[0.1vw] border-gray-800 pt-3 pl-6 pr-6 flex gap-3'>
+        <div className='flex flex-col gap-[1.18vw] pt-[0.1vw]'>
+          <FontAwesomeIcon icon={faPercent} className='absolute left-[2.1vw] top-[7.4vw] text-[0.7vw] text-gray-900' />
+          {[faHouse, faList, faStar, faCertificate, faAward, faLightbulb].map((items, index) => {
+            return <FontAwesomeIcon key={index} icon={items} className={`text-[1vw] text-slate-500 ${index >= 2 && "text-[1.24vw] -mt-[0.3vw]"}`} />
+          }
+          )}
+        </div>
+        <div>
+          {["Home", "Categories", "Customer Review", "Offer & Coupons", "Top Brands", "Fashion Tips"].map((items, index) => {
+            return <li className='navList list-none text-slate-100 text-[1vw] mb-2'><a key={index} href="#">{items}</a></li>
+          }
+          )}
+        </div>
+      </div>
+
+      <div style={{ transition: "opacity .5s" }} className='div3 relative boorder border-t-[0.1vw] border-gray-800 pt-3 pl-6 pr-6'>
+        <FontAwesomeIcon icon={faPhone} className='absolute left-7 top-[3.5vw] text-sm text-slate-500' />
+        <span className='text-slate-100 absolute top-12 left-14 text-xs'>1800 800 800</span>
+        <FontAwesomeIcon icon={faPhone} className='absolute left-7 top-[5vw] text-sm text-slate-500' />
+        <span className='text-slate-100 absolute top-[5vw] left-14 text-xs'>1800 300 500</span>
+        <h1 className='absolute text-sm text-slate-300'>24x7 Customer Support</h1>
+        <FontAwesomeIcon icon={faComments} className='absolute top-[7.8vw] left-8 text-sm text-slate-500' />
+        <button className="login absolute  top-24 pl-8 text-slate-100 bg-transparent rounded-md p-2 border border-slate-300 text-xs uppercase hover:text-black font-semibold overflow-hidden">Chat with us</button>
+      </div>
+      <FontAwesomeIcon id='#arrow' onClick={btnClick} icon={faAnglesLeft} className='absolute text-xl -left-[3.5vw] top-[50%] translate-y-[-50%] text-gray-800 z-30' />
+      <button onClick={btnClick} className='btn w-auto h-auto absolute -left-[5.5vw] top-[50%] translate-y-[-50%] bg-yellow-500 -rotate-90 text-sm p-2 pt-6 rounded-t-xl'>NAVIGATION</button>
+    </div>
+  )
+}
+
+export default Navbar
