@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@fontface {
-    font-family: "Exo 2", sans-serif;
-    src: url("https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap")
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -49,7 +44,7 @@ body {
 .text1 {
     -webkit-text-stroke: 2px rgba(36, 162, 201, 0.459);
     color: transparent;
-    font-family: "Exo 2", sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .login::before {
@@ -70,8 +65,53 @@ body {
 }
 
 .arrowflip {
-    rotate: 180deg;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
     position: absolute;
-    top: 47.5%;
-    transition: all 0.5s linear;
+    top: 48.7%;
+    transition: all 0.3s linear;
+}
+
+.ad1 {
+    clip-path: polygon(40% 0, 40% 6%, 100% 6%, 75% 94%, 20% 94%, 20% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+}
+
+.ad2 {
+    clip-path: polygon(20% 0%, 100% 0%, 79% 100%, 0% 100%)
+}
+
+.ad3 {
+    clip-path: polygon(40% 0, 40% 6%, 100% 6%, 75% 94%, 20% 94%, 20% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, -1);
+
+}
+
+
+.AdImg img:not(:nth-child(3)){
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    object-position:  30% 70%;
+}
+
+#bg3 img{
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    object-position: 75% 25%;
+}
+
+.fontfam{
+    font-family: var(--font-albert_Sans);
+}
+
+.ADtext{
+    font-family: var(--font-bodoni_Moda);
 }
