@@ -34,11 +34,11 @@ body {
 
 
 .child1 {
-    animation: scrollX 25s linear infinite;
+    animation: scrollX 30s linear infinite;
 }
 
 .child2 {
-    animation: scrollX 25s linear infinite reverse;
+    animation: scrollX 30s linear infinite reverse;
 }
 
 .text1 {
@@ -94,24 +94,65 @@ body {
 }
 
 
-.AdImg img:not(:nth-child(3)){
+.AdImg img:not(:nth-child(3)) {
     width: 100%;
-    height: 100%;   
+    height: 100%;
     object-fit: cover;
-    object-position:  30% 70%;
+    object-position: 30% 70%;
 }
 
-#bg3 img{
+#bg3 img {
     width: 100%;
-    height: 100%;   
+    height: 100%;
     object-fit: cover;
     object-position: 75% 25%;
 }
 
-.fontfam{
+.fontfam {
     font-family: var(--font-albert_Sans);
 }
 
-.ADtext{
+.ADtext {
     font-family: var(--font-bodoni_Moda);
+}
+
+.Navi {
+    font-family: var(--font-antonio);
+}
+
+.categ1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.categ2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(29, 29, 29);
+}
+
+.trendh1 {
+    font-family: var(--font-alexandria);
+}
+
+.trendSpan,
+.hash {
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 2px #62d0ffbd;
+    font-weight: 800;
+}
+
+::-webkit-scrollbar {
+    width: 1vw;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1d1d1;
+    box-shadow: 1px 1px 8px rgb(100, 100, 100) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #EAB308;
+    border-radius: 1vw;
+    box-shadow: -1px 1px 8px rgb(100, 100, 100);
 }

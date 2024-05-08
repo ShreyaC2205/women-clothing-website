@@ -88,8 +88,8 @@ const Navbar = () => {
         <FontAwesomeIcon icon={faComments} className='absolute top-[7.8vw] left-8 text-sm text-slate-500' />
         <button className="login absolute  top-24 pl-8 text-slate-100 bg-transparent rounded-md p-2 border border-slate-300 text-xs uppercase hover:text-black font-semibold overflow-hidden">Chat with us</button>
       </div>
-      <FontAwesomeIcon style={{transition:"all 0.2s"}} id='#arrow' onClick={btnClick} icon={faAnglesLeft} className='absolute text-xl -left-[3.5vw] top-[50%] translate-y-[-50%] text-gray-800 z-30' />
-      <button style={{transition: "all 0.5s"}} onClick={btnClick} className='btn w-auto h-auto absolute -left-[5.5vw] top-[50%] translate-y-[-50%] bg-yellow-500 -rotate-90 text-sm p-2 pt-6 rounded-t-xl hover:scale-[1.1]'>NAVIGATION</button>
+      <FontAwesomeIcon style={{transition:"all 0.2s"}} id='#arrow' onClick={btnClick} icon={faAnglesLeft} className='absolute text-xl -left-[3.5vw] top-[50%] translate-y-[-50%] text-[#26292c] z-30' />
+      <button style={{transition: "all 0.5s"}} onClick={btnClick} className='btn Navi w-auto h-auto absolute -left-[5vw] top-[50%] translate-y-[-50%] bg-yellow-500 -rotate-90 text-md p-2 pt-6 rounded-t-xl hover:scale-[1.1] uppercase'>Navigation</button>
     </div>
   )
 }
