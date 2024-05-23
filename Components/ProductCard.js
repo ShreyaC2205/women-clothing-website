@@ -12,12 +12,12 @@ const ProductCard = (props) => {
                     </div>
                     <img className='w-[100%] h-[100%] object-cover' src={props.image} alt="productImg" />
                 </div>
-                <div className="info  text-xs  pt-2 pr-1 pl-1 pb-1 text-gray-800">
+                <div className="info text-xs pt-2 pr-1 pl-1 pb-1 text-gray-800">
                     <h5 className='font-bold'>{props.brandName}</h5>
                     <p className='text-[0.8vw] pr-2 pb-[0.1vw]'>{props.description}</p>
                     <span className='font-bold'>{'\u20B9'} {props.price} <span className='text-red-500 ml-2'>{props.offer}</span></span>
                 </div>
-                <div className="btn bg-red-700 flex text-sm justify-center items-center font-bold rounded-b-xl text-white">ADD TO BAG</div>
+                <div className="btn bg-red-700 flex text-sm justify-center items-center font-bold rounded-b-xl text-white hover:cursor-pointer">ADD TO BAG</div>
             </div>
         </div>
     )

@@ -61,7 +61,7 @@ const LandingPage = () => {
             <div className="child1 w-auto h-full flex items-center">
               <h1 className='text1 absolute z-10 -top-14 text-8xl font-bold'>VOUGE FASHION TREND CLASSY</h1>
               {[summer, coupon1, trends, sale1, Winter, coupon3, formals].map((elements, index) => (
-                <motion.div key={index} initial={{ scale: 1 }} whileHover={{ scale: 1.05 }} transition={{ ease: "easeOut", duration: 0.4 }} className="elem1 border min-w-[16vw] h-[95%] p-1 bg-white flex mr-3 z-20 shadow-md shadow-slate-500 shadow-b-2 shadow-r-[6px] -shadow-spread-6 ">
+                <motion.div key={index} initial={{ scale: 1 }} whileHover={{ scale: 1.05 }} transition={{ ease: "easeOut", duration: 0.4 }} className="elem1 min-w-[16vw] h-[95%] p-1 bg-white flex mr-3 z-20 shadow-md shadow-slate-500 shadow-b-2 shadow-r-[6px] -shadow-spread-6 ">
                   <Image key={index} src={elements} alt='ads' />
                 </motion.div>
               )

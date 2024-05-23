@@ -33,12 +33,12 @@ const Trending = (Props) => {
         </div>
         <motion.div initial={{ left: "-100%" }} whileInView={{ left: 0 }} transition={{ ease: cubicBezier(.72, 0, .52, .97), duration: 2, delay: 1.4 }} className="relative imgs max-h-[90%] min-h-[97%] w-auto bg-blue-300 z-20 p-2 grid grid-rows-[49%_49%] rounded-2xl gap-2">
           <div className='flex  gap-2'>
-            <ProductCard image={Props.img1} brandName={Props.brandName} description={Props.description1} rating={Props.rating1} offer={Props.offer1} price={Props.price1} />
-            <ProductCard image={Props.img2} brandName={Props.brandName} description={Props.description2} rating={Props.rating2} offer={Props.offer2} price={Props.price2} />
+            <ProductCard image={Props.img1} brandName={Props.brandName} description={Props.description1} rating={Props.rating1} offer={Props.offer1} price={Props.price1} textSize={Props.textSize1} />
+            <ProductCard image={Props.img2} brandName={Props.brandName} description={Props.description2} rating={Props.rating2} offer={Props.offer2} price={Props.price2} textSize={Props.textSize2} />
           </div>
           <div className='flex gap-2'>
-            <ProductCard image={Props.img3} brandName={Props.brandName} description={Props.description3} rating={Props.rating3} offer={Props.offer3} price={Props.price3} />
-            <ProductCard image={Props.img4} brandName={Props.brandName} description={Props.description4} rating={Props.rating4} offer={Props.offer4} price={Props.price4} />
+            <ProductCard image={Props.img3} brandName={Props.brandName} description={Props.description3} rating={Props.rating3} offer={Props.offer3} price={Props.price3} textSize={Props.textSize3}/>
+            <ProductCard image={Props.img4} brandName={Props.brandName} description={Props.description4} rating={Props.rating4} offer={Props.offer4} price={Props.price4} textSize={Props.textSize4}/>
           </div>
         </motion.div>
       </div>
