@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 html,
@@ -141,7 +142,7 @@ body {
     -webkit-text-stroke: 2px #62d0ffbd;
     font-weight: 800;
 }
-.percent {
+.percent  {
     color: transparent;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 3px #62d0ffce;
@@ -194,3 +195,106 @@ body {
 .visible{
     opacity: 1;
 }
+
+.coupon{
+    width: 400px;
+    height: 400px;
+    background: url("/IMG/Coupons/scratchCard.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+.hoverEffect:hover {
+    transform: scale(1.1); /* Increase the scale to 110% on hover */
+}
+.tilted{
+    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    33.38% {
+        transform: translateX(calc(-100%));
+    }
+
+    58.33% {
+        transform: translateX(calc(-100%));
+    }
+
+    66.66% {
+        transform: translateX(calc(-200%));
+    }
+
+    91.66% {
+        transform: translateX(calc(-200%));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.imgSlide{
+    animation: slide 20s ease-in-out infinite;
+}
+.scrollInvisisble::-webkit-scrollbar{
+    display: none;
+}
+@keyframes topScroll {
+    from {
+        top: translateX(0)
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+.offerTextroll{
+    animation: topScroll 10s linear infinite;
+}
+.categH1 {
+    font-family: var(--font-bricolage_Grotesque);
+}
+
+.cateTitle {
+  /* Common styles for cateTitle */
+  background-size: cover;
+  background-position: center;
+}
+.cate1:hover {
+    cursor: n-resize; /* Up arrow when hovering over the scroll container */
+}
+
+.cate1:active {
+    cursor: s-resize; /* Down arrow when scrolling down */
+}
+
+.cate2:hover {
+    cursor: n-resize; /* Up arrow when hovering over the scroll container */
+}
+
+.cate2:active {
+    cursor: s-resize; /* Down arrow when scrolling down */
+}
+
+ .arrow-container {
+    background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0) 100%);
+    color: yellow;
+  }
+  
+  .textC{
+    font-family: var(--font-libre_Bodoni);
+    color: rgb(73, 73, 73);
+  }
+  
+ .extra{
+    font-family: var(--font-red_Rose);
+ }
+  

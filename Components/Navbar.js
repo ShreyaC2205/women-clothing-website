@@ -1,5 +1,4 @@
 "use client"
-import { motion } from 'framer-motion'
 // import Link from 'next/link'
 import React, { useState } from 'react'
 
@@ -15,7 +14,6 @@ const Navbar = () => {
     if (state === 0) {
       document.querySelector('.nav')
         .style.width = "15vw"
-      // document.querySelector(".lists").style.opacity = 1
       document.querySelector(".overlay").style.display = "block"
       document.querySelector(".divv").style.opacity = 1
       document.querySelector(".div1").style.opacity = 1
@@ -27,7 +25,6 @@ const Navbar = () => {
     }
     else {
       document.querySelector('.nav').style.width = "0vw"
-      // document.querySelector(".lists").style.opacity = 0
       document.querySelector(".overlay").style.display = "none"
       document.querySelector(".divv").style.opacity = 0
       document.querySelector(".div1").style.opacity = 0

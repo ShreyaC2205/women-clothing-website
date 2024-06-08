@@ -11,6 +11,8 @@ import OfferZone from '@/Components/OfferZone'
 import Card from '@/Components/Card'
 import Coords from '@/Components/Coords'
 import StyleCard from '@/Components/StyleCard'
+import Coupons from '@/Components/Coupons'
+import Categories from '@/Components/Categories'
 // import img1 from "../public/IMG/pair1a.jpg"
 const page = () => {
   return (
@@ -35,6 +37,8 @@ const page = () => {
         
         p2coimg1 = "/IMG/sec2pair1a.jpg" p2coimg2 = "/IMG/sec2pair1b.jpg" p2coimg3 = "/IMG/sec2pair2a.jpg" p2coimg4 = "/IMG/sec2pair2b.jpg" p2coimg5 = "/IMG/sec2pair3a.jpg" p2coimg6 = "/IMG/sec2pair3b.jpg" p2coimg7 = "/IMG/sec2pair4a.jpg" p2coimg8 = "/IMG/sec2pair4b.jpg" p2coimg9 = "/IMG/sec2pair5a.jpg" p2coimg10 = "/IMG/sec2pair5b.jpg" p2brand1 = "Enigma" p2brand2 = "Enigma" p2brand3= "Aura" p2brand4 = "Aura" p2brand5="Elara" p2brand6="Elara" p2brand7="Divina" p2brand8="Divina" p2brand9="Allegra" p2brand10="Allegra" p2desc1 ="Mint Green Crop Sweater" p2desc2="Floral Printed Midi Skirt" p2desc3="White Casual Half-Sleeve Shirt" p2desc4="Levender Shoulder Strap Midi Dress" p2desc5 = "Skyblue Ruffle Top" p2desc6 = "White Midi Skirt" p2desc7="White Crop Collar T-shirt" p2desc8="Navy Blue Mini Skirt" p2desc9="GoldBrown Silk Wrap Top" p2desc10="High Waist Gray Long Skirt" p2price1="1399" p2price2="899" p2price3="699" p2price4="1099" p2price5="599" p2price6="799" p2price7="499" p2price8="1199" p2price9="1299" p2price10="899" p2offer1="20%" p2offer2="11%" p2offer3="23%" p2offer4="29%" p2offer5="8%" p2offer6 ="33%" p2offer7="39%" p2offer8="18%" p2offer9="12%" p2offer10="21%" p2rating1="4.3" p2rating2="3.8" p2rating3="4.1" p2rating4="4.5" p2rating5="4.7" p2rating6="4.6" p2rating7="4.2" p2rating8 ="4.0" p2rating9="4.8" p2rating10="4.0"/> */}
         <Coords/>
+        <Coupons/>
+        <Categories/>
       </div>
     </>
   )
