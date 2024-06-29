@@ -131,23 +131,27 @@ body {
     -webkit-text-stroke: 1px rgb(29, 29, 29);
 }
 
-.trendh1, .offerText {
+.trendh1,
+.offerText {
     font-family: var(--font-alexandria);
 }
 
 .trendSpan,
-.hash, .coText {
+.hash,
+.coText {
     color: transparent;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 2px #62d0ffbd;
     font-weight: 800;
 }
-.percent  {
+
+.percent {
     color: transparent;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 3px #62d0ffce;
     font-weight: 800;
 }
+
 ::-webkit-scrollbar {
     width: 0.8vw;
 }
@@ -162,14 +166,13 @@ body {
     border-radius: 1vw;
     box-shadow: -1px 1px 8px rgb(100, 100, 100);
 }
-.YellowStrip{
-    background: repeating-linear-gradient(
-  45deg,
-  #EAB308,
-  #EAB308 10px,
-  #000000 10px,
-  #000000 20px
-    ) 
+
+.YellowStrip {
+    background: repeating-linear-gradient(45deg,
+            #EAB308,
+            #EAB308 10px,
+            #000000 10px,
+            #000000 20px)
 }
 
 @keyframes scrollXB {
@@ -181,22 +184,24 @@ body {
         transform: translateX(calc(-100% - 1px));
     }
 }
-.brandStrip{
+
+.brandStrip {
     animation: scrollXB 30s linear infinite;
 }
 
-.shop:hover{
-    background-color: darkgreen;
-}
-.More:hover{
+.shop:hover {
     background-color: darkgreen;
 }
 
-.visible{
+.More:hover {
+    background-color: darkgreen;
+}
+
+.visible {
     opacity: 1;
 }
 
-.coupon{
+.coupon {
     width: 400px;
     height: 400px;
     background: url("/IMG/Coupons/scratchCard.jpg");
@@ -204,10 +209,13 @@ body {
     background-position: center center;
     overflow: hidden;
 }
+
 .hoverEffect:hover {
-    transform: scale(1.1); /* Increase the scale to 110% on hover */
+    transform: scale(1.1);
+    /* Increase the scale to 110% on hover */
 }
-.tilted{
+
+.tilted {
     clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
 }
 
@@ -241,12 +249,14 @@ body {
     }
 }
 
-.imgSlide{
+.imgSlide {
     animation: slide 20s ease-in-out infinite;
 }
-.scrollInvisisble::-webkit-scrollbar{
+
+.scrollInvisisble::-webkit-scrollbar {
     display: none;
 }
+
 @keyframes topScroll {
     from {
         top: translateX(0)
@@ -256,45 +266,147 @@ body {
         transform: translateY(-100%);
     }
 }
-.offerTextroll{
+
+.offerTextroll {
     animation: topScroll 10s linear infinite;
 }
+
 .categH1 {
     font-family: var(--font-bricolage_Grotesque);
 }
 
 .cateTitle {
-  /* Common styles for cateTitle */
-  background-size: cover;
-  background-position: center;
+    /* Common styles for cateTitle */
+    background-size: cover;
+    background-position: center;
 }
+
 .cate1:hover {
-    cursor: n-resize; /* Up arrow when hovering over the scroll container */
+    cursor: n-resize;
+    /* Up arrow when hovering over the scroll container */
 }
 
 .cate1:active {
-    cursor: s-resize; /* Down arrow when scrolling down */
+    cursor: s-resize;
+    /* Down arrow when scrolling down */
 }
 
 .cate2:hover {
-    cursor: n-resize; /* Up arrow when hovering over the scroll container */
+    cursor: n-resize;
+    /* Up arrow when hovering over the scroll container */
 }
 
 .cate2:active {
-    cursor: s-resize; /* Down arrow when scrolling down */
+    cursor: s-resize;
+    /* Down arrow when scrolling down */
 }
 
- .arrow-container {
-    background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0) 100%);
+.arrow-container {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 100%);
     color: yellow;
-  }
-  
-  .textC{
+}
+
+.textC {
     font-family: var(--font-libre_Bodoni);
     color: rgb(73, 73, 73);
-  }
-  
- .extra{
+}
+
+.extra {
     font-family: var(--font-red_Rose);
- }
-  
+}
+
+.mobImg {
+    perspective: 50vw;
+}
+
+#phoneBG {
+    transform: rotateY(30deg) rotateX(10deg);
+}
+
+.saleBG {
+    transform: rotateY(30deg) rotateX(10deg);
+}
+
+#adImg1 {
+    transform: rotateX(10deg);
+}
+
+.EndOfSeason {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 4.5vw;
+    z-index: 20;
+    color: #62d0ffce;
+}
+
+.EndOfSeason::before {
+    content: "END OF SEASON";
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 100%;
+    color: #0b98d4;
+    left: 15vw;
+    z-index: -10;
+    /* -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(255, 0, 0); */
+}
+
+.EndOfSeason::after {
+    content: "END OF SEASON";
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    color: #057bad;
+    left: 15.4vw;
+    z-index: -20;
+    /* -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(255, 0, 0); */
+}
+
+.EndOfSeasonOffer {
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 2px #057bad;
+    font-weight: 800;
+    font-size: 3.5vw;
+}
+
+.EndOfSeasonSale {
+    font-size: 6vw;
+    color: red;
+    font-family: var(--font-monoton);
+}
+
+.LowPriceText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+.containerLowP::-webkit-scrollbar {
+    display: none;
+}
+
+.imgLowP::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 2px solid rgba(185, 185, 185, 0.589);
+    z-index: 20;
+    border-radius: 0.5vw;
+}
+
+.shopText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+.shops::-webkit-scrollbar{
+    display: none;
+}
+.visit{
+    background-color: rgba(253, 253, 253, 0.473);
+    backdrop-filter: blur(1px);
+}
+

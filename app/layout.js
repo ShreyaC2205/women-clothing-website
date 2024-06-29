@@ -2,7 +2,7 @@ import '@fortawesome/fontawesome-svg-core';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss =  false;
 
-import { Inter, Albert_Sans, Bodoni_Moda, Antonio, Alexandria, Bricolage_Grotesque, Anek_Tamil, Libre_Bodoni, Red_Rose} from "next/font/google";
+import { Inter, Albert_Sans, Bodoni_Moda, Antonio, Alexandria, Bricolage_Grotesque, Anek_Tamil, Libre_Bodoni, Red_Rose, Tourney, Monoton} from "next/font/google";
 import "./globals.css";
 
 const albert_Sans = Albert_Sans({
@@ -53,6 +53,18 @@ const red_Rose = Red_Rose({
   variable: "--font-red_Rose"
 })
 
+const tourney = Tourney({
+  subsets: ['latin'],
+  weight: "700",
+  variable: "--font-tourney"
+})
+
+const monoton = Monoton({
+  subsets: ['latin'],
+  weight: "400",
+  variable: "--font-monoton"
+})
+
 
 
 
@@ -64,7 +76,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${albert_Sans.variable} ${bodoni_Moda.variable} ${antonio.variable} ${alexandria.variable} ${bricolage_Grotesque.variable} ${anek_Tamil.variable}  ${libre_Bodoni.variable} ${red_Rose.variable}`}>{children}</body>
+      <body className={`${inter.className} ${albert_Sans.variable} ${bodoni_Moda.variable} ${antonio.variable} ${alexandria.variable} ${bricolage_Grotesque.variable} ${anek_Tamil.variable}  ${libre_Bodoni.variable} ${red_Rose.variable} ${tourney.variable} ${monoton.variable}`}>{children}</body>
     </html>
   );
 }

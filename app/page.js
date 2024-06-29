@@ -13,6 +13,9 @@ import Coords from '@/Components/Coords'
 import StyleCard from '@/Components/StyleCard'
 import Coupons from '@/Components/Coupons'
 import Categories from '@/Components/Categories'
+import BackgroundAd2 from '@/Components/BackgroundAd2'
+import LowPrice from '@/Components/LowPrice'
+import Shop from '@/Components/Shop'
 // import img1 from "../public/IMG/pair1a.jpg"
 const page = () => {
   return (
@@ -39,6 +42,9 @@ const page = () => {
         <Coords/>
         <Coupons/>
         <Categories/>
+        <BackgroundAd2/>
+        <LowPrice/>
+        <Shop/>
       </div>
     </>
   )

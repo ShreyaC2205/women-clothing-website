@@ -97,7 +97,7 @@ const Categories = () => {
 
     return (
         <div className='relative w-[100%] h-[100vh] bg-[#A9E5FF] rounded-tl-[2vw] rounded-tr-[2vw] flex justify-center overflow-hidden select-none'>
-            <motion.div initial={{ bottom: "1vw" }} whileInView={{ top: "1vw" }} transition={{ ease: "easeInOut", duration: 2 }} className="absolute z-20 categContainer w-[98%] h-[83%] rounded-xl shadow-md shadow-slate-500 shadow-b-[1px] shadow-r-[3px] -shadow-spread-5 bg-slate-100 grid grid-cols-[15%_15%_15%_8%_15%_15%_15%] pt-2 pb-2 justify-center">
+            <motion.div initial={{ bottom: "1vw" }} whileInView={{ top: "1vw" }} transition={{ ease: "easeInOut", duration: 2, delay:1 }} className="absolute z-20 categContainer w-[98%] h-[83%] rounded-xl shadow-md shadow-slate-500 shadow-b-[1px] shadow-r-[3px] -shadow-spread-5 bg-slate-100 grid grid-cols-[15%_15%_15%_8%_15%_15%_15%] pt-2 pb-2 justify-center">
                 <div className="relative cate1 overflow-y-auto rounded-tl-xl rounded-bl-xl bg-amber-200 scrollInvisisble flex-cols justify-center p-2 cate">
                     <motion.div
                         className="arrow-container absolute bottom-8 left-1/2 -translate-x-1/ text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
@@ -249,7 +249,7 @@ const Categories = () => {
                     ))}
                 </div>
 
-                <div className="relative cate5 overflow-y-auto scrollInvisisble bg-blue-300 flex-cols justify-center p-2 pb-2">
+                <div className="relative cate5 overflow-y-auto scrollInvisisble bg-blue-300 flex-cols justify-center p-2 pb-2 cate">
                     <div className="relative extra rounded-lg h-10 w-full flex justify-center text-lg uppercase text-stone-600 bg-slate-100 mb-2 overflow-hidden">
                         {FlashText2.map((element, index)=>(
                         <h1 className='absolute CateText2 -bottom-96'>
@@ -324,77 +324,6 @@ const Categories = () => {
                 </div>
             </motion.div>
             <div className="absolute z-10 offerText -bottom-[6.5vw] categH1 text-[#62d0ffce] text-[16vw]">CATEGORIES</div>
-
-
-            {/*TEXT SCROLL UP LOGIC */}
-            {/* <div className='relative w-full h-full  rounded-tl-[2vw] rounded-tr-[2vw] overflow-hidden'>
-                <div className="title h-[12%] coText flex m-0 p-0  justify-center z-0">
-                    <motion.span initial={{ y: "70%" }} whileInView={{ y: "0" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.2 }} className='relative -top-2 text-[6vw] m-0 p-0 '>CATEGORY</motion.span>
-                </div> */}
-            {/* <div className=' overflow-hidden scrollText min-h-[77%] z-10 h-[77%] w-[100%] absolute  bottom-0 left-1/2 -translate-x-1/2'>
-                    <div className="offerTextroll leading-[7vw] text-center">
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>LATEST</span>FASHION<span className='coText ml-8'>HUB</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>URBAN</span>STYLE<span className='coText ml-8'>STOP</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>STYLE</span>HAVEN<span className='coText ml-8'>BASE</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>FASHION</span>LOFT<span className='coText ml-8'>SPOT</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>STYLE</span>MECCA<span className='coText ml-8'>LOFT</span></h1>
-                    </div>
-
-                    <div className="offerTextroll leading-[7vw] text-center">
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>CHIC</span>STYLE<span className='coText ml-8'>STOP</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>STYLE</span>AVENUE<span className='coText ml-8'>ZONE</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>MODERN</span>TREND<span className='coText ml-8'>HAVEN</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>FASHION</span>VOGUE<span className='coText ml-8'>ZONE</span></h1>
-                        <h1 className='offerText text-[7vw] text-[#62d0ffce]'><span className='coText mr-8'>TRENDY</span>STYLE<span className='coText ml-8'>DEN</span></h1>
-                    </div>
-                </div> */}
-
-            {/*IMAGE SLIDE LOGIC */}
-            {/* <div className='absolute z-10 min-w-[200%]  offerText top-[12vw] left-0 categText text-[12vw] text-[#62d0ffce] text-bold'>
-                    <h1>Style avanue zone</h1>
-                </div>
-                <div className="relative catege2 min-h-[40%] w-auto  overflow-x-auto pl-4 overflow-y-hidden">
-                    <div className="absolute z-20 container min-w-[200%] h-[90%]  flex gap-3">
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                    </div>
-                </div>
-                <div className='absolute z-10 min-w-[200%]  offerText top-[32vw] left-0 categText text-[12vw] text-[#62d0ffce] text-bold'>
-                    <h1>T-shirt dress crop top trousers </h1>
-                </div> */}
-            {/* <div className="relative catege2 h-[40%] w-auto  flex items-center overflow-auto pl-4">
-                    <div className="absolute z-20  container min-w-[200%] h-[90%] flex gap-3">
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                        <CategoryCard />
-                    </div>
-                </div>
-            </div> */}
-
-
         </div>
     )
 }
