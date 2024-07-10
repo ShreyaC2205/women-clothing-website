@@ -16,6 +16,8 @@ import Categories from '@/Components/Categories'
 import BackgroundAd2 from '@/Components/BackgroundAd2'
 import LowPrice from '@/Components/LowPrice'
 import Shop from '@/Components/Shop'
+import BestSeller from '@/Components/BestSeller'
+import NewArrival from '@/Components/NewArrival'
 // import img1 from "../public/IMG/pair1a.jpg"
 const page = () => {
   return (
@@ -45,6 +47,8 @@ const page = () => {
         <BackgroundAd2/>
         <LowPrice/>
         <Shop/>
+        <NewArrival/>
+        <BestSeller/>
       </div>
     </>
   )

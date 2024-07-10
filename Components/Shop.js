@@ -18,7 +18,7 @@ const Shop = () => {
         setActiveSectionIndex((prevIndex) => (prevIndex < 2 ? prevIndex + 1 : 0));
     };
     return (
-        <div className='relative w-[100%] h-[100vh] bg-[#A9E5FF] z-0 cursor-pointer'>
+        <div className='relative w-[100%] h-[100vh] bg-[#A9E5FF] z-0 cursor-pointer overflow-hidden'>
             <div className="relative ShopContainer w-4/5 h-full left-1/2 -translate-x-1/2 flex justify-center z-20 -top-6 ">
                 <motion.h1 initial={{ color: "rgb(39, 39, 39)", textShadow: "none" }} whileInView={{ color: "rgb(252, 209, 209)", textShadow: "0px 0px 20px #ff0000e8, 0px 0px 20px #ff0000e8,  0px 0px 40px #ff0000e8,  0px 0px 80px #ff0000e8,  0px 0px 160px #ff0000e8" }} transition={{ ease: easeInOut, duration: 1 }} className='shopText absolute text-[7vw] left-1/2 -translate-x-1/2'>SHOP</motion.h1>
                 <img src="/IMG/canopy.jpg" alt="canopy img" className='absolute h-[80%] object-cover -top-4 z-20' />
