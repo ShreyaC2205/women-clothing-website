@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import ProductCard from './ProductCard';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faAnglesRight} from '@fortawesome/free-solid-svg-icons'
+import { faAnglesRight } from '@fortawesome/free-solid-svg-icons'
 
 const StyleCard = (Props) => {
 
@@ -51,7 +51,7 @@ const StyleCard = (Props) => {
         });
     };
 
-  
+
     const handlePairDivMouseLeave = () => {
         const shopHereDiv = shopHereRef.current;
         if (shopHereDiv) shopHereDiv.style.opacity = 1;
@@ -60,33 +60,34 @@ const StyleCard = (Props) => {
         });
     }
 
-        return (
-            <div>
-                <div className="container w-[100%] h-[100%] relative co1 rounded-xl overflow-hidden shadow-[2px_2px_6px_gray]">
-                    <img className='w-[100%] h-[38.7vw] object-cover' src={Props.imageSec[currentImageIndex]} alt="pairIMG" />
-                    {pairDiv.map((element, index) => (
-                        <div ref={pairRefs.current[index]} style={{ transition: "all 0.6s" }} key={index} onMouseLeave={() => handlePairDivMouseLeave(index)} className={`${element}  w-[80%] h-[59%] bg-lime-500 rounded-xl absolute top-[22%] left-1/2 -translate-x-1/2 grid grid-rows-[10%_90%] opacity-0`}>
-                            <div className='flex justify-center items-center font-bold text-xl text-red-700'>QUICK BUY</div>
-                            <div className='quickBuy flex p-2 gap-2 w-auto '>
-                                <ProductCard image={Props[`Coimg${pairA}`]} brandName={Props[`qbrand${pairA}`]} description={Props[`qdesc${pairA}`]} price={Props[`qprice${pairA}`]} offer={Props[`qoffer${pairA}`]} rating={Props[`qrating${pairA}`]} />
-                                <ProductCard image={Props[`Coimg${pairB}`]} brandName={Props[`qbrand${pairB}`]} description={Props[`qdesc${pairB}`]} price={Props[`qprice${pairB}`]} offer={Props[`qoffer${pairB}`]} rating={Props[`qrating${pairB}`]} />
-                            </div>
+    return (
+        <div>
+            <div className=" container w-[100%] h-[100%] relative co1 rounded-xl  overflow-hidden shadow-[2px_2px_6px_gray]">
+                <img src="/IMG/bg2.jpg" alt="bg" className='absolute z-10 w-[100%] h-[100%] object-cover' />
+                <img className='absolute w-[100%] h-[38.7vw] object-cover z-20' src={Props.imageSec[currentImageIndex]} alt="pairIMG" />
+                {pairDiv.map((element, index) => (
+                    <div ref={pairRefs.current[index]} style={{ transition: "all 0.6s" }} key={index} onMouseLeave={() => handlePairDivMouseLeave(index)} className={`${element}  w-[85%] h-[64%] bg-lime-500 rounded-xl absolute top-[22%] left-1/2 -translate-x-1/2 grid grid-rows-[10%_90%] opacity-0 z-20`}>
+                        <div className='flex justify-center items-center font-bold text-xl text-red-700'>QUICK BUY</div>
+                        <div className='quickBuy flex p-2 gap-2 w-auto '>
+                            <ProductCard image={Props[`Coimg${pairA}`]} brandName={Props[`qbrand${pairA}`]} description={Props[`qdesc${pairA}`]} price={Props[`qprice${pairA}`]} offer={Props[`qoffer${pairA}`]} rating={Props[`qrating${pairA}`]} />
+                            <ProductCard image={Props[`Coimg${pairB}`]} brandName={Props[`qbrand${pairB}`]} description={Props[`qdesc${pairB}`]} price={Props[`qprice${pairB}`]} offer={Props[`qoffer${pairB}`]} rating={Props[`qrating${pairB}`]} />
                         </div>
-                    )
-                    )}
+                    </div>
+                )
+                )}
 
-                    <div ref={shopHereRef}style={{ transition: "all 0.6s" }} className='ShopHere w-[80%] h-10 bg-lime-500 rounded-xl absolute top-1/2 -translate-y-[50%] left-1/2 -translate-x-1/2 grid grid-cols-[1fr_1fr]'>
-                        <div onMouseEnter={handleShopButtonMouseEnter} className="downSize border-r-2 flex justify-center items-center hover:rounded-xl cursor-pointer">
-                            <button onMouseEnter={handleShopButtonMouseEnter} className='downSize'>SHOP</button>
-                        </div>
-                        <div className="More flex justify-center items-center  hover:rounded-xl cursor-pointer gap-2">
-                            <button onClick={handleMoreBtnClick}>NEXT</button>
-                            <FontAwesomeIcon icon={faAnglesRight} className='text-sm text-gray-800'/>
-                        </div>
+                <div ref={shopHereRef} style={{ transition: "all 0.6s" }} className='ShopHere w-[80%] h-10 bg-lime-500 rounded-xl absolute top-1/2 -translate-y-[50%] left-1/2 -translate-x-1/2 grid grid-cols-[1fr_1fr] z-20'>
+                    <div onMouseEnter={handleShopButtonMouseEnter} className="downSize border-r-2 flex justify-center items-center hover:rounded-xl cursor-pointer">
+                        <button onMouseEnter={handleShopButtonMouseEnter} className='downSize Outfit1'>SHOP</button>
+                    </div>
+                    <div className="More flex justify-center items-center  hover:rounded-xl cursor-pointer gap-2">
+                        <button className='Outfit1' onClick={handleMoreBtnClick}>NEXT</button>
+                        <FontAwesomeIcon icon={faAnglesRight} className='text-sm text-gray-800' />
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
+}
 
-    export default StyleCard
+export default StyleCard

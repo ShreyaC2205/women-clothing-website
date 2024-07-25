@@ -61,7 +61,7 @@ const NewArrival = () => {
     }, [scrollPosition, autoScrollInterval]);
 
     return (
-        <div className='relative w-[100%] h-[55vh] bg-[#26292c]'>
+        <div data-scroll data-scroll-section data-scroll-speed="-.6" className='relative w-[100%] h-[55vh] bg-[#26292c]'>
             <h1 className="absolute -top-1 LowPriceText w-full text-center text-yellow-500 text-[4.5vw] mt-1">NEW ARRIVAL</h1>
             <div ref={bestContainerRef} className="absolute bestContainer min-w-[100%] h-[73%] flex items-center bottom-7 px-2 overflow-auto cursor-pointer">
                 {bestSellers.map((element, index) => (
@@ -69,10 +69,10 @@ const NewArrival = () => {
                         <div className="tag absolute right-0 top-0  bg-yellow-400 text-xs px-2 py-1 rounded-bl-md font-semibold shadow-md">New</div>
                         <img src={element[0]} alt="img" className=' w-full h-full object-cover' />
                         <div className="absolute inset-0 bg-gradient-to-t from-gray-800/70 to-transparent to-30%  flex flex-col justify-end p-1">
-                            <div className="flex flex-col pl-2 text-white">
-                                <span className='font-semibold text-xs'>{element[1]}</span>
-                                <span className='font-light text-[0.8vw]'>{element[2]}</span>
-                                <span className='font-semibold text-xs'>{'\u20B9'}{element[3]}<span className='text-yellow-400 font-bold ml-2'>{element[4]}</span></span>
+                            <div className="flex flex-col pl-2">
+                                <span className=' text-sm Outfit1 text-white'>{element[1]}</span>
+                                <span className=' text-[0.85vw] Outfit1 text-slate-100'>{element[2]}</span>
+                                <span className=' text-sm Outfit2 text-white'>{'\u20B9'}{element[3]}<span className='text-yellow-400 font-bold ml-2'>{element[4]}</span></span>
                             </div>
                         </div>
                     </div>

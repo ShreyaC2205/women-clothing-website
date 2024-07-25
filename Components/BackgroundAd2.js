@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from 'react'
 import { cubicBezier, motion } from 'framer-motion'
 // import React, { useState, useEffect } from 'react';
@@ -25,14 +26,10 @@ const BackgroundAd2 = () => {
       opacity: 0,
     }, 'anim')
   })
-
   return (
-    <div className='w-[100%] h-[100vh] bg-[#26292c]'>
+    <div data-scroll data-scroll-section data-scroll-speed="0.6" className='w-[100%] h-[100vh] bg-[#A9E5FF] rounded-tl-[2vw] rounded-tr-[2vw] rounded-br-[2vw] rounded-bl-[2vw] z-50'>
       <div className='relative w-full h-full rounded-tr-[2vw] overflow-hidden flex items-center justify-center'>
-        {/* <div className="title h-[12%] coText flex m-0 p-0  justify-center z-0">
-          <motion.span initial={{ y: "70%" }} whileInView={{ y: "0" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.2 }} className='relative -top-2 text-[6vw] m-0 p-0 '>CATEGORY</motion.span>
-        </div> */}
-        <div className="absolute circle w-[70vw] h-[30vw] bg-yellow-500 rounded-full z-30 cursor-pointer">
+        <div className="absolute circle w-[70vw] h-[30vw] bg-yellow-500 rounded-full z-30 cursor-pointer shadow-[2px_2px_8px_gray]">
           <motion.div initial={{opacity:"0"}} whileInView={{opacity:1}} transition={{ease:"easeInOut", duration:1.5}} className="saleHeading w-auto h-auto relative left-20 top-2 flex flex-col items-center">
             <span className='EndOfSeason'>END OF SEASON</span>
             <span className='EndOfSeasonSale -mt-2'>SALE</span>
@@ -55,7 +52,7 @@ const BackgroundAd2 = () => {
           <div className='AnimImg z-30 w-full h-full absolute left-2 -bottom-2 opacity-0'>
             <img className='absolute left-16 h-full w-full ' src="/IMG/AD2/adImg3.jpg"  alt="adImg3" />
           </div>
-          <img id='phoneBG' src="/IMG/phoneScreen.png" alt="mobile Img" />
+          <img id='phoneBG' src="/IMG/phoneScreen.png" alt="mobile Img" className=' mobile' />
         </motion.div>
         <div className=' overflow-hidden scrollText h-[100%] z-20 w-[100%] absolute  bottom-0 '>
           <div className="offerTextroll leading-[7vw] text-center">

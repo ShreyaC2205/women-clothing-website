@@ -1,5 +1,4 @@
 "use client"
-import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
@@ -52,9 +51,8 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className='ParentDiv w-[100%] h-[100vh] bg-[#A9E5FF] relative overflow-hidden rounded-bl-[2vw] rounded-br-[2vw]'>
+      <div data-scroll data-scroll-section data-scroll-speed="-.4" className='ParentDiv w-[100%] h-[100vh] bg-[#A9E5FF] relative overflow-hidden rounded-bl-[2vw] rounded-br-[2vw] z-50'>
         <Image id='logo' className='absolute left-3 top-3 w-16' src={logo} alt='logo' />
-        <div className="overlay w-full h-screen bg-gradient-to-l from-slate-900 ... absolute z-10 hidden"></div>
         <div className='cursorDiv w-[70px] h-[70px] rounded-full flex justify-center items-center bg-black fixed text-white text-[0.8vw] uppercase z-30 opacity-0 scale-0'><span className='text-xl'>E</span>xplore</div>
         <div className="container absolute w-[100vw] h-[100vh] grid grid-rows-2 -rotate-12 ">
           <div className='relative w-full h-full flex'>
@@ -104,4 +102,3 @@ const LandingPage = () => {
 }
 
 export default LandingPage
-''

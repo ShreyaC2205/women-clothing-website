@@ -8,8 +8,8 @@ import ProductCard from './ProductCard'
 
 const Trending = (Props) => {
   return (
-    <div className='relative mainsec w-[100%] h-[100vh]  p-2'>
-      <div className={`absolute sec1 w-auto grid grid-cols-[50%_48%] z-10 h-[94.3%] ${Props.position} bg-slate-200 pt-2 pl-2 pr-2 gap-[0.8vw] rounded-3xl shadow-[1px_1px_6px_gray] overflow-hidden`}>
+    <div className='relative mainsec w-[100%] h-[100vh] p-2'>
+      <div className={`absolute sec1 w-auto grid grid-cols-[50%_48%] z-10 h-[93.2%] ${Props.position} bg-slate-100 pt-2 pl-2 pr-2 gap-[0.8vw] rounded-3xl shadow-[1px_1px_6px_gray] overflow-hidden`}>
         <motion.h1 initial={{ left: "0%", opacity: 0 }} whileInView={{ left: "54%", opacity: 1 }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.2 }} className='categ1 absolute z-10 flex top-1/2 -translate-y-[100%] text-[4.2vw] font-bold text-gray-900' >{Props.categ1}</motion.h1>
         <motion.h1 initial={{ bottom: "10%", opacity: 0 }} whileInView={{ bottom: "35%", opacity: 1 }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.2 }} className='categ2 absolute z-10 flex right-4 text-[7vw] font-bold'>{Props.categ1a}</motion.h1>
 
@@ -31,8 +31,8 @@ const Trending = (Props) => {
           </div>
           <video autoPlay muted loop className='rounded-2xl min-w-full ' src={Props.video}></video>
         </div>
-        <motion.div initial={{ left: "-100%" }} whileInView={{ left: 0 }} transition={{ ease: cubicBezier(.72, 0, .52, .97), duration: 2, delay: 1.4 }} className="relative imgs max-h-[90%] min-h-[97%] w-auto bg-blue-300 z-20 p-2 grid grid-rows-[49%_49%] rounded-2xl gap-2">
-          <div className='flex  gap-2'>
+        <motion.div initial={{ left: "-100%" }} whileInView={{ left: 0 }} transition={{ ease: cubicBezier(.72, 0, .52, .97), duration: 2, delay: 1.4 }} className="relative imgs max-h-[98.5%] min-h-[97%] w-auto bg-blue-300 z-20 p-2 grid grid-rows-[49%_49%] rounded-2xl gap-2">
+          <div className='flex gap-2'>
             <ProductCard image={Props.img1} brandName={Props.brandName} description={Props.description1} rating={Props.rating1} offer={Props.offer1} price={Props.price1} textSize={Props.textSize1} />
             <ProductCard image={Props.img2} brandName={Props.brandName} description={Props.description2} rating={Props.rating2} offer={Props.offer2} price={Props.price2} textSize={Props.textSize2} />
           </div>

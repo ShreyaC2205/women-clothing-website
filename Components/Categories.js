@@ -2,7 +2,7 @@ import { AnimatePresence, cubicBezier, motion } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 import CategoryCard from './CategoryCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
 import { Timeline } from 'gsap/gsap-core'
@@ -26,59 +26,47 @@ const Categories = () => {
     );
 
     useGSAP(() => {
-        const tl = new Timeline({ repeat: -1, repeatDealay: 8 })
+        const tl = new Timeline({ repeat: -1, repeatDealay: 8 });
+
         tl.to(".CateText", {
             ease: "expo.inOut",
             stagger: 5,
             left: "40%",
             duration: 2
-        }, 'anim').to(".CateText", {
-            delay: 5,
-            ease: "expo.inOut",
-            stagger: 5,
-            left: "100%",
-        }, 'anim').to(".CateText1", {
-            ease: "expo.inOut",
-            stagger: 5,
-            top: "12%",
-            duration: 2
-          }, 'anim').to(".CateText1", {
-            delay: 5,
-            ease: "expo.inOut",
-            stagger: 5,
-            top: "-100%",
-          }, 'anim').to(".CateText2", {
-            ease: "expo.inOut",
-            stagger: 5,
-            top: "12%",
-            duration: 2
-          }, 'anim').to(".CateText2", {
-            delay: 5,
-            ease: "expo.inOut",
-            stagger: 5,
-            top: "-100%",
-          }, 'anim')
+        }, 'anim')
+            .to(".CateText", {
+                delay: 5,
+                ease: "expo.inOut",
+                stagger: 5,
+                left: "100%",
+            }, 'anim');
 
+        tl.to(".CateText1", {
+            ease: "expo.inOut",
+            stagger: 5,
+            top: "12%",
+            duration: 2
+        }, 'anim')
+            .to(".CateText1", {
+                delay: 5,
+                ease: "expo.inOut",
+                stagger: 5,
+                top: "-100%",
+            }, 'anim');
+
+        tl.to(".CateText2", {
+            ease: "expo.inOut",
+            stagger: 5,
+            top: "12%",
+            duration: 2
+        }, 'anim')
+            .to(".CateText2", {
+                delay: 5,
+                ease: "expo.inOut",
+                stagger: 5,
+                top: "-100%",
+            }, 'anim');
     })
-
-
-    useEffect(() => {
-        const cateArrows = document.querySelectorAll('.cate .arrow-container');
-
-        cateArrows.forEach(arrow => {
-            const cate = arrow.closest('.cate');
-
-            cate.addEventListener('scroll', function () {
-                const scrollPercentage = (cate.scrollTop + cate.clientHeight) / cate.scrollHeight * 100;
-
-                if (scrollPercentage >= 20) {
-                    arrow.style.display = 'none';
-                } else {
-                    arrow.style.display = 'block';
-                }
-            });
-        });
-    }, []);
 
 
     const imgArr1 = [["/IMG/categories/tshirt1.jpg", "/IMG/categories/tshirt2.jpg", "/IMG/categories/tshirt3.jpg"], ["/IMG/categories/top1.jpg", "/IMG/categories/top2.jpg", "/IMG/categories/top3.jpg"], ["/IMG/categories/shirt1.jpg", "/IMG/categories/shirt2.jpg", "/IMG/categories/shirt3.jpg"], ["/IMG/categories/jacket1.jpg", "/IMG/categories/jacket2.jpg", "/IMG/categories/jacket3.jpg"], ["/IMG/categories/shrug1.jpg", "/IMG/categories/shrug2.jpg", "/IMG/categories/shrug3.jpg"]]
@@ -95,35 +83,49 @@ const Categories = () => {
     const categNames5 = ["Gowns", "Dresses", "Party Wear", "Formals", "Coords"]
     const categNames6 = ["Winter wear", "Activewear", "Jumpsuits", "Loungewear", "Dungaree"]
 
+    const cateRefs = {
+        cate1: useRef(null),
+        cate2: useRef(null),
+        cate3: useRef(null),
+        cate4: useRef(null),
+        cate5: useRef(null),
+        cate6: useRef(null),
+    };
+
+    const handleScrollUp = (cateRef) => {
+        if (cateRef.current) {
+            const container = cateRef.current;
+            const scrollAmount = window.innerWidth * 0.2; 
+
+            container.scrollTo({
+                top: container.scrollTop + scrollAmount,
+                behavior: 'smooth'
+            });
+
+       
+            if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
+                container.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
+
     return (
-        <div className='relative w-[100%] h-[100vh] bg-[#A9E5FF] rounded-tl-[2vw] rounded-tr-[2vw] flex justify-center overflow-hidden select-none'>
-            <motion.div initial={{ bottom: "1vw" }} whileInView={{ top: "1vw" }} transition={{ ease: "easeInOut", duration: 2, delay:1 }} className="absolute z-20 categContainer w-[98%] h-[83%] rounded-xl shadow-md shadow-slate-500 shadow-b-[1px] shadow-r-[3px] -shadow-spread-5 bg-slate-100 grid grid-cols-[15%_15%_15%_8%_15%_15%_15%] pt-2 pb-2 justify-center">
-                <div className="relative cate1 overflow-y-auto rounded-tl-xl rounded-bl-xl bg-amber-200 scrollInvisisble flex-cols justify-center p-2 cate">
-                    <motion.div
-                        className="arrow-container absolute bottom-8 left-1/2 -translate-x-1/ text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="arrow"
-                            animate={{
-                                y: [-10, 10, -10],
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: "reverse", // Swing back and forth
-                            }}
-                        >
-                            <FontAwesomeIcon icon={faAngleDoubleUp} />
-                        </motion.div>
-                    </motion.div>
+        <div data-scroll data-scroll-section data-scroll-speed="-0.15" className='relative w-[100%] h-[100vh] bg-[#A9E5FF] rounded-tl-[2vw] rounded-tr-[2vw] rounded-br-[2vw] rounded-bl-[2vw] flex justify-center overflow-hidden select-none z-50'>
+            <motion.div initial={{ bottom: "1vw" }} whileInView={{ top: "1vw" }} transition={{ ease: "easeInOut", duration: 2, delay:1 }} className="absolute z-20 s categContainer w-[98%] h-[83%] rounded-xl shadow-md shadow-slate-500 shadow-b-[1px] shadow-r-[3px] -shadow-spread-5 bg-slate-100 grid grid-cols-[15%_15%_15%_8%_15%_15%_15%] pt-2 pb-2 justify-center">
+
+                <button className="arrow-container  absolute bottom-0 left-[7vw] text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
+                    onClick={() => handleScrollUp(cateRefs.cate1)}>
+                    <FontAwesomeIcon icon={faAngleDoubleDown} />
+                </button>
+                <div className="relative cate1 overflow-y-auto rounded-tl-xl rounded-bl-xl bg-amber-200 scrollInvisisble flex-cols justify-center p-2 cate" ref={cateRefs.cate1}>
                     {imgArr1.map((element, index) => (
-                        <div className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2' key={index}>
+                        <div key={`category1_${index}`} className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2'>
                             <CategoryCard img1={element[0]} img2={element[1]} img3={element[2]} />
                             <div className="cateTitle rounded-md flex justify-center items-center  mb-4" style={{ backgroundImage: `url("/IMG/categories/clipart/bgText.jpg")` }}><span
-                                className="text-background-color px-2  rounded-md"
+                                className="text-background-color px-2 Outfit2 text-gray-900 rounded-md"
                                 style={{ fontSize: '1.2vw', fontWeight: "bold", backgroundColor: "white" }}
                             >
                                 {categNames1[index]}
@@ -133,39 +135,23 @@ const Categories = () => {
                 </div>
 
 
-                <div className="relative cate2 overflow-y-auto scrollInvisisble  bg-blue-300 flex-cols justify-center p-2 pb-2 cate">
-                <div className="relative extra rounded-lg h-10 w-full flex justify-center uppercase text-stone-600 text-lg bg-slate-100 mb-2 overflow-hidden">
-                        {FlashText1.map((element, index)=>(
-                        <h1 className='absolute CateText1 -bottom-96'>
-                            <span key={index}>{element}</span>
-                        </h1>
+                <button className="arrow-container  absolute bottom-0 left-[21.5vw] text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
+                    onClick={() => handleScrollUp(cateRefs.cate2)}>
+                    <FontAwesomeIcon icon={faAngleDoubleDown} />
+                </button>
+                <div className="relative cate2 overflow-y-auto scrollInvisisble  bg-blue-300 flex-cols justify-center p-2 pb-2 cate"ref={cateRefs.cate2}>
+                    <div className="relative extra rounded-lg h-10 w-full flex justify-center uppercase text-stone-600 text-lg bg-slate-100 mb-2 overflow-hidden">
+                        {FlashText1.map((element, index) => (
+                            <h1 key={`flashText1_${index}`} className='absolute CateText1 text-slate-800 -bottom-96'>
+                                <span>{element}</span>
+                            </h1>
                         ))}
                     </div>
-                    <motion.div
-                        className="arrow-container absolute bottom-8 left-1/2 -translate-x-1/2 text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="arrow"
-                            animate={{
-                                y: [-10, 10, -10], // Swinging animation
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: "reverse", // Swing back and forth
-                            }}
-                        >
-                            <FontAwesomeIcon icon={faAngleDoubleUp} />
-                        </motion.div>
-                    </motion.div>
                     {imgArr2.map((element, index) => (
-                        <div className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2' key={index}>
+                        <div key={`category2_${index}`} className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2'>
                             <CategoryCard img1={element[0]} img2={element[1]} img3={element[2]} />
                             <div className="cateTitle rounded-md flex justify-center items-center mt1 mb-4" style={{ backgroundImage: `url("/IMG/categories/clipart/bgText.jpg")` }}><span
-                                className="text-background-color px-2  rounded-md"
+                                className="text-background-color px-2 Outfit2 text-gray-900 rounded-md"
                                 style={{ fontSize: '1.2vw', fontWeight: "bold", backgroundColor: "white" }}
                             >
                                 {categNames2[index]}
@@ -174,32 +160,16 @@ const Categories = () => {
                     ))}
                 </div>
 
-                <div className="relative cate3 overflow-y-auto scrollInvisisble rounded-tr-xl flex-cols justify-center p-2 pb-2 bg-amber-200 cate">
-                    <motion.div
-                        className="arrow-container absolute bottom-8 left-1/2 -translate-x-1/2 text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="arrow"
-                            animate={{
-                                y: [-10, 10, -10], // Swinging animation
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: "reverse", // Swing back and forth
-                            }}
-                        >
-                            <FontAwesomeIcon icon={faAngleDoubleUp} />
-                        </motion.div>
-                    </motion.div>
+                <button className="arrow-container  absolute bottom-0 left-[36vw] text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
+                    onClick={() => handleScrollUp(cateRefs.cate3)}>
+                    <FontAwesomeIcon icon={faAngleDoubleDown} />
+                </button>
+                <div className="relative cate3 overflow-y-auto scrollInvisisble rounded-tr-xl flex-cols justify-center p-2 pb-2 bg-amber-200 cate"ref={cateRefs.cate3}> 
                     {imgArr3.map((element, index) => (
-                        <div className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2' key={index}>
+                        <div key={`category3_${index}`} className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2'>
                             <CategoryCard img1={element[0]} img2={element[1]} img3={element[2]} />
                             <div className="cateTitle rounded-md flex justify-center items-center mt1 mb-4" style={{ backgroundImage: `url("/IMG/categories/clipart/bgText.jpg")` }}><span
-                                className="text-background-color px-2  rounded-md"
+                                className="text-background-color px-2 Outfit2 text-gray-900 rounded-md"
                                 style={{ fontSize: '1.2vw', fontWeight: "bold", backgroundColor: "white" }}
                             >
                                 {categNames3[index]}
@@ -215,32 +185,16 @@ const Categories = () => {
                     ))}
                 </div>
 
-                <div className="relative cate4 overflow-y-auto scrollInvisisble rounded-tl-xl bg-amber-200 flex-cols justify-center p-2 pb-2 cate">
-                    <motion.div
-                        className="arrow-container absolute bottom-8 left-1/2 -translate-x-1/2 text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="arrow"
-                            animate={{
-                                y: [-10, 10, -10], // Swinging animation
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: "reverse", // Swing back and forth
-                            }}
-                        >
-                            <FontAwesomeIcon icon={faAngleDoubleUp} />
-                        </motion.div>
-                    </motion.div>
+                <button className="arrow-container  absolute bottom-0 left-[59vw] text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
+                    onClick={() => handleScrollUp(cateRefs.cate4)}>
+                    <FontAwesomeIcon icon={faAngleDoubleDown} />
+                </button>
+                <div className="relative cate4 overflow-y-auto scrollInvisisble rounded-tl-xl bg-amber-200 flex-cols justify-center p-2 pb-2 cate" ref={cateRefs.cate4}>
                     {imgArr4.map((element, index) => (
-                        <div className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2' key={index}>
+                        <div key={`category4_${index}`} className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2'>
                             <CategoryCard img1={element[0]} img2={element[1]} img3={element[2]} />
                             <div className="cateTitle rounded-md flex justify-center items-center mt1 mb-4" style={{ backgroundImage: `url("/IMG/categories/clipart/bgText.jpg")` }}><span
-                                className="text-background-color px-2  rounded-md"
+                                className="text-background-color px-2 Outfit2 text-gray-900 rounded-md"
                                 style={{ fontSize: '1.2vw', fontWeight: "bold", backgroundColor: "white" }}
                             >
                                 {categNames4[index]}
@@ -249,39 +203,23 @@ const Categories = () => {
                     ))}
                 </div>
 
-                <div className="relative cate5 overflow-y-auto scrollInvisisble bg-blue-300 flex-cols justify-center p-2 pb-2 cate">
+                <button className="arrow-container  absolute bottom-0 left-[73vw] text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
+                    onClick={() => handleScrollUp(cateRefs.cate5)}>
+                    <FontAwesomeIcon icon={faAngleDoubleDown} />
+                </button>
+                <div className="relative cate5 overflow-y-auto scrollInvisisble bg-blue-300 flex-cols justify-center p-2 pb-2 cate" ref={cateRefs.cate5}>
                     <div className="relative extra rounded-lg h-10 w-full flex justify-center text-lg uppercase text-stone-600 bg-slate-100 mb-2 overflow-hidden">
-                        {FlashText2.map((element, index)=>(
-                        <h1 className='absolute CateText2 -bottom-96'>
-                            <span key={index}>{element}</span>
-                        </h1>
+                        {FlashText2.map((element, index) => (
+                            <h1 key={`flashText2_${index}`} className='absolute CateText2 text-slate-800 -bottom-96'>
+                                <span>{element}</span>
+                            </h1>
                         ))}
                     </div>
-                    <motion.div
-                        className="arrow-container absolute bottom-8 left-1/2 -translate-x-1/2 text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="arrow"
-                            animate={{
-                                y: [-10, 10, -10], // Swinging animation
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: "reverse", // Swing back and forth
-                            }}
-                        >
-                            <FontAwesomeIcon icon={faAngleDoubleUp} />
-                        </motion.div>
-                    </motion.div>
                     {imgArr5.map((element, index) => (
-                        <div className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2' key={index}>
+                        <div key={`category5_${index}`} className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2'>
                             <CategoryCard img1={element[0]} img2={element[1]} img3={element[2]} />
                             <div className="cateTitle rounded-md flex justify-center items-center mt1 mb-4" style={{ backgroundImage: `url("/IMG/categories/clipart/bgText.jpg")` }}><span
-                                className="text-background-color px-2  rounded-md"
+                                className="text-background-color px-2 Outfit2 text-gray-900 rounded-md"
                                 style={{ fontSize: '1.2vw', fontWeight: "bold", backgroundColor: "white" }}
                             >
                                 {categNames5[index]}
@@ -289,32 +227,17 @@ const Categories = () => {
                         </div>
                     ))}
                 </div>
-                <div className="relative cate6 overflow-y-auto scrollInvisisble rounded-tr-xl rounded-bl-xl bg-amber-200 flex-cols justify-center p-2 pb-2 cate">
-                    <motion.div
-                        className="arrow-container absolute bottom-8 left-1/2 -translate-x-1/2 text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="arrow"
-                            animate={{
-                                y: [-10, 10, -10], // Swinging animation
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatType: "reverse", // Swing back and forth
-                            }}
-                        >
-                            <FontAwesomeIcon icon={faAngleDoubleUp} />
-                        </motion.div>
-                    </motion.div>
+
+                <button className="arrow-container  absolute bottom-0 left-[88vw] text-[3vw] w-[3vw] h-[4vw] flex justify-center z-40"
+                    onClick={() => handleScrollUp(cateRefs.cate6)}>
+                    <FontAwesomeIcon icon={faAngleDoubleDown} />
+                </button>
+                <div className="relative cate6 overflow-y-auto scrollInvisisble rounded-tr-xl rounded-bl-xl bg-amber-200 flex-cols justify-center p-2 pb-2 cate" ref={cateRefs.cate6}>
                     {imgArr6.map((element, index) => (
-                        <div className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2' key={index}>
+                        <div key={`category6_${index}`} className='slideDownUp min-h-[55%] max-h-[55%] grid grid-rows-[80%_20%] gap-2'>
                             <CategoryCard img1={element[0]} img2={element[1]} img3={element[2]} />
                             <div className="cateTitle rounded-md flex justify-center items-center mt1 mb-4" style={{ backgroundImage: `url("/IMG/categories/clipart/bgText.jpg")` }}><span
-                                className="text-background-color px-2  rounded-md"
+                                className="text-background-color px-2 Outfit2 text-gray-900 rounded-md"
                                 style={{ fontSize: '1.2vw', fontWeight: "bold", backgroundColor: "white" }}
                             >
                                 {categNames6[index]}

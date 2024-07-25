@@ -110,11 +110,11 @@ const Coupons = () => {
     };
 
     return (
-        <div className='relative w-[100%] h-[60vh] bg-gray-800'>
-            <div className=' w-auto h-auto coText flex m-0 p-0  justify-center z-0'>
-                <motion.span initial={{ y: "70%" }} whileInView={{ y: "0" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.2 }} className='relative -top-2 text-[6vw] m-0 p-0 '>COUPONS</motion.span>
+        <div data-scroll data-scroll-section data-scroll-speed="-.7" className='relative w-[100%] h-[80vh] bg-[#26292c]'>
+            <div className=' absolute w-auto h-auto coText flex m-0 p-0  z-0 left-1/2 -translate-x-1/2 '>
+                <motion.span initial={{ top: "20vw" }} whileInView={{ top: "5.5vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.2 }} className='relative text-[6vw] m-0 p-0 '>COUPONS</motion.span>
             </div>
-            <div className='absolute couponContainer w-[75%] min-h-[20vw]  top-[19%] left-1/2 -translate-x-1/2  flex rounded-xl overflow-hidden'>
+            <div className='absolute couponContainer w-[75%] min-h-[20vw]  bottom-20 left-1/2 -translate-x-1/2  flex rounded-xl overflow-hidden'>
                 <motion.div initial={{ x: "0" }} animate={nextClick ? { x: "-100%" } : { x: "0" }} transition={{ease:"easeInOut", duration:1}} className='CouponsScratch min-w-[100%] min-h-[100%] bg-[#FFC90D] flex items-center justify-around pl-10 pr-10'>
                     {[1, 2, 3, 4].map((index) => (
                         <div key={index} className='relative w-[16vw] h-[16vw] select-none'>
@@ -125,7 +125,7 @@ const Coupons = () => {
                         </div>
                     ))}
                 </motion.div>
-                <motion.div initial={{ x: "0" }} animate={nextClick ? { x: "-100%" } : { x: "0" }} transition={{ease:"easeInOut", duration:1}} className='CouponsScratch  min-w-[100%] min-h-[100%] bg-[#FE4773] flex items-center justify-around pl-10 pr-10'>
+                <motion.div initial={{ x: "0" }} animate={nextClick ? { x: "-100%" } : { x: "0" }} transition={{ease:"easeInOut", duration:1}} className='CouponsScratch  min-w-[100%] min-h-[100%] bg-[#A9E5FF] flex items-center justify-around pl-10 pr-10'>
                     {[5, 6, 7, 8].map((index) => (
                         <div key={index} className='relative w-[16vw] h-[16vw] select-none rounded-xl overflow-hidden'>
                             <div onClick={() => clickedCoupon(index)} className='absolute scratchCard w-full h-full '>
@@ -136,19 +136,19 @@ const Coupons = () => {
                     ))}
                 </motion.div>
             </div>
-            <div onClick={handleNextClick} className='next absolute w-20 h-20 rounded-full bg-[#FFC90D] flex top-[45%]  right-32 items-center justify-center shadow-xl'>
+            <div onClick={handleNextClick} className='next absolute w-20 h-20 rounded-full bg-[#FFC90D] flex top-[50%]  right-32 items-center justify-center shadow-xl'>
                 <button className="next">
                     <FontAwesomeIcon icon={faAnglesRight} className=' text-gray-800 text-[3vw]' />
                 </button>
             </div>
-            <div onClick={handlePreviousClick} className='next absolute w-20 h-20 rounded-full bg-[#FFC90D] flex top-[45%] left-32 items-center justify-center shadow-xl'>
+            <div onClick={handlePreviousClick} className='next absolute w-20 h-20 rounded-full bg-[#FFC90D] flex top-[50%] left-32 items-center justify-center shadow-xl'>
                 <button className="previous">
                     <FontAwesomeIcon icon={faAnglesLeft} className=' text-gray-800 text-[3vw]' />
                 </button>
             </div>
             <div>
                 {modalOpen && clicked !== null && (
-                    <div className="modal absolute top-0 left-0 w-[100%] h-[100%] flex justify-center items-center bg-black bg-opacity-50 p-2 select-none">
+                    <div className="modal absolute bottom-20 left-1/2 -translate-x-1/2 w-[70%] h-[70%] flex justify-center items-center bg-black bg-opacity-50 p-2 select-none">
                         <div className="max-w-screen-sm w-full h-full relative">
                             <button onClick={closeModal} className="absolute top-4 right-4 text-white text-3xl focus:outline-none">&times;</button>
                             <img className="max-w-full max-h-full" src={`/IMG/Coupons/Coupon${clicked}.png`} alt='coupon' />

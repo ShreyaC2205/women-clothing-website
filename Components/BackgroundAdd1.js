@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
 import { Timeline } from 'gsap/gsap-core'
@@ -7,6 +7,7 @@ import { Timeline } from 'gsap/gsap-core'
 gsap.registerPlugin(useGSAP);
 
 const BackgroundAdd1 = () => {
+
   useGSAP(() => {
     const tl = new Timeline({ repeat: -1, repeatDealay: 8 })
     tl.to('.AdImg', {
@@ -30,7 +31,7 @@ const BackgroundAdd1 = () => {
 
   return (
     <>
-      <div className='relative w-[100%] h-[100vh] bg-[#26292c]' >
+      <div data-scroll data-scroll-section data-scroll-speed="-.6" className='relative w-[100%] h-[100vh] bg-[#26292c]' >
         <div className="imageBg absolute w-[80%] h-[80%] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
           <div className="texts absolute z-30 -translate-x-20 bottom-10 h-32 w-[34vw] overflow-hidden bg-gray-400/30 flex justify-center rounded-md">
             <h1 className='ADtext absolute flex flex-col z-30 text-right top-32 uppercase'>

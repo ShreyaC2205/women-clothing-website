@@ -7,8 +7,8 @@ const LowPriceCard = (props) => {
                 <img className='absolute min-w-[100%] h-[100%] object-cover z-10' src="/IMG/lowPBG.jpg" alt="img" />
                 <img className=' min-w-[100%] h-[100%] object-cover z-20' src={props.img} alt="img" />
             </div>
-            <div className="cardText text-center text-md">
-                <h1>Staring from {props.price}</h1>
+            <div className="cardText text-center text-md Outfit2 text-gray-800">
+                <h1>Staring from ₹{props.price}</h1>
             </div>
         </div>
     )

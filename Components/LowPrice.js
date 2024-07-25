@@ -26,9 +26,9 @@ const LowPrice = () => {
     }, []);
 
     return (
-        <div className='relative w-[100%] h-[55vh] bg-[#26292c]'>
-            <h1 className="absolute LowPriceText  w-full text-center text-yellow-500 text-[4.5vw] mt-3">LOWEST PRICE STORE</h1>
-            <div className="containerLowP rounded-2xl w-[95%] h-[70%] absolute bottom-7 left-1/2 -translate-x-1/2 flex overflow-auto border-8 border-yellow-500">
+        <div data-scroll data-scroll-section data-scroll-speed="-0.2" className='relative w-[100%] h-[65vh] bg-[#26292c]'>
+            <h1 className="absolute LowPriceText w-full text-center text-yellow-500 text-[4.5vw] mt-2">LOWEST PRICE STORE</h1>
+            <div className="containerLowP rounded-2xl w-[95%] h-[41vh] absolute bottom-20 left-1/2 -translate-x-1/2 flex overflow-auto border-8 border-yellow-500">
                 <motion.div
                     className="arrow-container absolute items-center right-6 top-1/2 -translate-y-1/2 text-[3vw] w-[4vw] h-[3vw] flex justify-center z-40"
                     initial={{ opacity: 0 }}

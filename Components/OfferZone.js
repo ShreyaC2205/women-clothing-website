@@ -6,15 +6,15 @@ const OfferZone = () => {
 
     const arr = ["/IMG/Brands/adidas.png", "/IMG/Brands/dressberry.png", "/IMG/Brands/freakins.png", "/IMG/Brands/H&M.png", "/IMG/Brands/Levis.png", "/IMG/Brands/libas.png", "/IMG/Brands/Mango.png", "/IMG/Brands/only.png", "/IMG/Brands/puma.png", "/IMG/Brands/westside.png", "/IMG/Brands/zara.png", "/IMG/Brands/biba.png", "/IMG/Brands/pantaloons.png"]
     return (
-        <div className='relative MainContainer w-[100%] h-[100vh] bg-[#A9E5FF] overflow-hidden' >
-            <div className='absolute w-[100%] h-[100%] flex flex-cols justify-center  '>
-                <div className="absolute cardsContain w-[96%] h-auto top-5 flex gap-4 justify-between">
+        <div className='relative MainContainer w-[100%] h-[100vh] bg-[#A9E5FF] overflow-hidden rounded-tl-[2vw] rounded-tr-[2vw] rounded-br-[2vw] rounded-bl-[2vw] z-50' >
+            <div className='absolute w-[100%] h-[100%] flex flex-cols justify-center'>
+                <div className="absolute cardsContain w-[96%] h-auto top-7 flex gap-4 justify-between">
                     <Card OfferImg="/IMG/tshirt.png" brandImg="/IMG/Brands/adidas.png" CardOffer1="T-shirt" CardOffer2="Min 40% Off" />
                     <Card OfferImg="/IMG/jumpsuit.png" brandImg="/IMG/Brands/dressberry.png" CardOffer1="Jumpsuits" CardOffer2="Min 24% Off" />
                     <Card OfferImg="/IMG/jeans.jpg" brandImg="/IMG/Brands/levis.png" CardOffer1="Jeans" CardOffer2="Min 55% Off" />
                     <Card OfferImg="/IMG/sportwear.jpg" brandImg="/IMG/Brands/puma.png" CardOffer1="SportWear" CardOffer2="Min 33% Off" />
                 </div>
-                <div className="absolute cardsContain w-[96%] h-auto flex gap-4 justify-between top-1/2 translate-y-[6.3vw] z-20">
+                <div className="absolute cardsContain w-[96%] h-auto flex gap-4 justify-between top-1/2 translate-y-[6.6vw] z-20">
                     <Card OfferImg="/IMG/denim.jpg" brandImg="/IMG/Brands/freakins.png" CardOffer1="All About Denim" CardOffer2="Min 23% Off" />
                     <Card OfferImg="/IMG/kurti.png" brandImg="/IMG/Brands/libas.png" CardOffer1="TraditionalWear" CardOffer2="Min 60% Off" />
                     <Card OfferImg="/IMG/dresswear.png" brandImg="/IMG/Brands/westside.png" CardOffer1="Dresses" CardOffer2="Min 48% Off" />

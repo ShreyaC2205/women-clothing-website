@@ -18,7 +18,7 @@ const Shop = () => {
         setActiveSectionIndex((prevIndex) => (prevIndex < 2 ? prevIndex + 1 : 0));
     };
     return (
-        <div className='relative w-[100%] h-[100vh] bg-[#A9E5FF] z-0 cursor-pointer overflow-hidden'>
+        <div className='relative w-[100%] h-[100vh] bg-[#A9E5FF] z-50 cursor-pointer overflow-hidden rounded-tl-[2vw] rounded-tr-[2vw] rounded-br-[2vw] rounded-bl-[2vw] '>
             <div className="relative ShopContainer w-4/5 h-full left-1/2 -translate-x-1/2 flex justify-center z-20 -top-6 ">
                 <motion.h1 initial={{ color: "rgb(39, 39, 39)", textShadow: "none" }} whileInView={{ color: "rgb(252, 209, 209)", textShadow: "0px 0px 20px #ff0000e8, 0px 0px 20px #ff0000e8,  0px 0px 40px #ff0000e8,  0px 0px 80px #ff0000e8,  0px 0px 160px #ff0000e8" }} transition={{ ease: easeInOut, duration: 1 }} className='shopText absolute text-[7vw] left-1/2 -translate-x-1/2'>SHOP</motion.h1>
                 <img src="/IMG/canopy.jpg" alt="canopy img" className='absolute h-[80%] object-cover -top-4 z-20' />
@@ -29,7 +29,7 @@ const Shop = () => {
                     transform: `translateX(-${activeSectionIndex * 100}%)`,
                     transition: 'transform 0.5s ease'
                 }}>
-                    <div className="flex sContain1 min-w-[100%] min-h-[100%]">
+                    <div className="flex sContain1 min-w-[100%] min-h-[100%] ">
                         {group1.map((element, index) => (
                             <div className='relative  h-[80%] w-[100%] flex justify-center' key={index}>
                                 <img src="/IMG/window7.png" alt="windowImg" className='w-[100%] h-[100%] object-cover  z-30' />
@@ -37,11 +37,11 @@ const Shop = () => {
                                     <img src={element[0]} alt="shop" className='w-[100%] h-[100%] object-cover rounded-md' />
                                     <h1 className='absolute  text-sm p-[0.1vw] w-full visit top-1/2 -translate-y-[65%] text-center font-bold  uppercase'>{element[1]}</h1>
                                 </div>
-                                <button className="absolute  w-auto px-4 h-6 left-[6vw] rounded-2xl top-[8vw] bg-yellow-400 z-30 uppercase text-sm font-bold text-gray-900 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">Visit Shop</button>
-                                <button className="absolute bg-[#C1B1A2] w-[58%] px-4 h-6 left-[4.5vw] top-[22vw] flex justify-center items-center z-30  text-sm font-bold text-gray-900 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">{element[2]}</button>
-                                <div className="info -bottom-[6vw] left-[3.2vw] absolute w-[70%] text-gray-900  z-30 flex flex-col gap-1 justify-center pointer-events-auto">
+                                <button className="absolute  w-auto px-4 h-6 left-[6vw] rounded-2xl top-[8vw] bg-yellow-400 z-30 uppercase text-sm font-bold text-gray-800 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6 Outfit2">Visit Shop</button>
+                                <button className="absolute bg-[#C1B1A2] w-[58%] px-4 h-6 left-[4.5vw] top-[22vw] flex justify-center items-center z-30  text-sm Outfit2 text-gray-800 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6 Outfit2">{element[2]}</button>
+                                <div className="info -bottom-[6vw] left-[3.2vw] absolute w-[70%] text-gray-800  z-30 flex flex-col gap-1 justify-center pointer-events-auto">
                                     <div className='w-full cursor-pointer'>
-                                        <button className=" followShop px-2 py-1 rounded-lg w-full h-7  text-center text-sm bg-yellow-400 font-bold">FOLLOW</button>
+                                        <button className=" followShop px-2 py-1 rounded-lg w-full h-7  text-center text-sm bg-yellow-400 Outfit2">FOLLOW</button>
                                     </div>
                                     <div className='shopInfo w-full text-xs flex flex-col rounded-lg justify-center text-center bg-white/70 font-bold py-[0.1vw]'>
                                         <span>{element[3]}{'\u2605'}</span><span>{element[4]} ratings</span><span>{element[5]} followers</span>
@@ -59,9 +59,9 @@ const Shop = () => {
                                     <img src={element[0]} alt="shop" className='w-[100%] h-[100%] object-cover rounded-md' />
                                     <h1 className='absolute  text-sm p-[0.1vw] w-full visit top-1/2 -translate-y-[65%] text-center font-bold  uppercase'>{element[1]}</h1>
                                 </div>
-                                <button className="absolute  w-auto px-4 h-6 left-[6vw] rounded-2xl top-[8vw] bg-yellow-400 z-30 uppercase text-sm font-bold text-gray-900 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">Visit Shop</button>
-                                <button className="absolute bg-[#C1B1A2] w-[58%] rounded-sm px-4 h-6 left-[4.5vw] top-[22vw]  z-30 flex justify-center items-center text-sm font-bold text-gray-900 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">{element[2]}</button>
-                                <div className="info -bottom-[6vw] left-[3.2vw] absolute w-[70%] text-gray-900  z-30 flex flex-col gap-1 justify-center">
+                                <button className="absolute  w-auto px-4 h-6 left-[6vw] rounded-2xl top-[8vw] bg-yellow-400 z-30 uppercase text-sm font-bold text-gray-800 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">Visit Shop</button>
+                                <button className="absolute bg-[#C1B1A2] w-[58%] rounded-sm px-4 h-6 left-[4.5vw] top-[22vw]  z-30 flex justify-center items-center text-sm text-gray-800 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6 Outfit2">{element[2]}</button>
+                                <div className="info -bottom-[6vw] left-[3.2vw] absolute w-[70%] text-gray-800  z-30 flex flex-col gap-1 justify-center">
                                     <div className='w-full cursor-pointer'>
                                         <button className=" followShop px-2 py-1 rounded-lg w-full h-7  text-center text-sm bg-yellow-400 font-bold">FOLLOW</button>
                                     </div>
@@ -81,10 +81,10 @@ const Shop = () => {
                                     <img src={element[0]} alt="shop" className='w-[100%] h-[100%] object-cover rounded-md' />
                                     <h1 className='absolute  text-sm p-[0.1vw] w-full visit top-1/2 -translate-y-[65%] text-center font-bold  uppercase'>{element[1]}</h1>
                                 </div>
-                                <button className="absolute  w-auto px-4 h-6 left-[6vw] rounded-2xl top-[8vw] bg-yellow-400 z-30 uppercase text-sm font-bold text-gray-900 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">Visit Shop</button>
-                                <button className="absolute bg-[#C1B1A2] w-[58%] px-4 h-6 left-[4.5vw] top-[22vw]  z-30 flex justify-center items-center text-sm font-bold text-gray-900 overflow-hidden shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">{element[2]}
+                                <button className="absolute  w-auto px-4 h-6 left-[6vw] rounded-2xl top-[8vw] bg-yellow-400 z-30 uppercase text-sm font-bold text-gray-800 shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6">Visit Shop</button>
+                                <button className="absolute bg-[#C1B1A2] w-[58%] px-4 h-6 left-[4.5vw] top-[22vw]  z-30 flex justify-center items-center text-sm  text-gray-800 overflow-hidden shadow-md shadow-gray-900/60 shadow-t-[1px] shadow-spread-6 Outfit2">{element[2]}
                                  </button>
-                                <div className="info -bottom-[6vw] left-[3.2vw] absolute w-[70%] text-gray-900  z-30 flex flex-col gap-1 justify-center">
+                                <div className="info -bottom-[6vw] left-[3.2vw] absolute w-[70%] text-gray-800  z-30 flex flex-col gap-1 justify-center">
                                     <div className='w-full'>
                                         <button className=" followShop px-2 py-1 rounded-lg w-full h-7  text-center text-sm bg-yellow-400 font-bold ">FOLLOW</button>
                                     </div>

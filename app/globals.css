@@ -64,7 +64,21 @@ body {
 .login:hover::before {
     transform: translateX(0);
 }
-
+.login2::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fdc009;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: all 0.4s linear;
+    z-index: -1;
+}
+.login2:hover::before {
+    transform: translateX(0);
+}
 .arrowflip {
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
@@ -138,7 +152,7 @@ body {
 
 .trendSpan,
 .hash,
-.coText {
+.coText{
     color: transparent;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 2px #62d0ffbd;
@@ -212,7 +226,6 @@ body {
 
 .hoverEffect:hover {
     transform: scale(1.1);
-    /* Increase the scale to 110% on hover */
 }
 
 .tilted {
@@ -276,29 +289,24 @@ body {
 }
 
 .cateTitle {
-    /* Common styles for cateTitle */
     background-size: cover;
     background-position: center;
 }
 
 .cate1:hover {
     cursor: n-resize;
-    /* Up arrow when hovering over the scroll container */
 }
 
 .cate1:active {
     cursor: s-resize;
-    /* Down arrow when scrolling down */
 }
 
 .cate2:hover {
     cursor: n-resize;
-    /* Up arrow when hovering over the scroll container */
 }
 
 .cate2:active {
     cursor: s-resize;
-    /* Down arrow when scrolling down */
 }
 
 .arrow-container {
@@ -348,8 +356,6 @@ body {
     color: #0b98d4;
     left: 15vw;
     z-index: -10;
-    /* -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: rgb(255, 0, 0); */
 }
 
 .EndOfSeason::after {
@@ -361,8 +367,6 @@ body {
     color: #057bad;
     left: 15.4vw;
     z-index: -20;
-    /* -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: rgb(255, 0, 0); */
 }
 
 .EndOfSeasonOffer {
@@ -407,7 +411,7 @@ body {
 }
 .visit{
     background-color: rgba(253, 253, 253, 0.473);
-    backdrop-filter: blur(1px);
+    
 }
 .bestContainer::-webkit-scrollbar{
     display: none;
@@ -415,6 +419,68 @@ body {
 .shIMG img{
     filter: drop-shadow(10px 0px 8px rgba(61, 61, 61, 0.863));
 }
+.mobile{
+    filter: drop-shadow(2px 0px 2px rgba(78, 78, 78, 0.863));
+}
 .NewContainer::-webkit-scrollbar{
     display: none;
+}
+.textF{
+    font-family: var(--font-anton);
+}
+.grayIMG{
+    filter: grayscale(1);
+}
+.grayIMG1{
+    filter: grayscale(100%) brightness(150%) contrast(80%);
+}
+
+.grayIMG2{
+    filter: grayscale(100%) brightness(200%) contrast(50%);
+}
+.grayIMG3{
+    filter: grayscale(100%) brightness(300%) contrast(10%);
+}
+.textF2{
+    font-family: var(--font-big_Shoulders_Display);
+}
+.reviewContain::-webkit-scrollbar{
+    display: none;
+}
+.textsarea::-webkit-scrollbar{
+    display: none;
+}
+.textss{
+    background: linear-gradient(to bottom, rgb(108, 0, 185), skyblue, rgb(0, 218, 152));
+    color: transparent;
+    -webkit-background-clip: text;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    z-index: 999;
+    
+}
+.overlay{
+    z-index: 555;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.cabinFont1{
+    font-family: var(--font-cabin);
+    font-weight: 400;
+}
+.cabinFont2{
+    font-family: var(--font-cabin);
+    font-weight: 700;
+}
+.Outfit1{
+    font-family: var(--font-nunito_Sans);
+    font-weight: 500;
+}
+.Outfit2{
+    font-family: var(--font-outfit);
+    font-weight: 800;
 }
