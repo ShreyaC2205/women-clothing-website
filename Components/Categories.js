@@ -246,7 +246,7 @@ const Categories = () => {
                     ))}
                 </div>
             </motion.div>
-            <div className="absolute z-10 offerText -bottom-[6.5vw] categH1 text-[#62d0ffce] text-[16vw]">CATEGORIES</div>
+            <div className="absolute z-10 -bottom-[6.2vw] categH1 text-[#62d0ffce] text-[15vw]">CATEGORIES</div>
         </div>
     )
 }

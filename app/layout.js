@@ -31,7 +31,7 @@ const alexandria = Alexandria({
 
 const bricolage_Grotesque = Bricolage_Grotesque({
   subsets: ['latin'],
-  weight: "600",
+  weight: "700",
   variable: "--font-bricolage_Grotesque"
 })
 

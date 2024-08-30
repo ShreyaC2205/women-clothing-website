@@ -3,7 +3,7 @@ import BackgroundAdd1 from '@/Components/BackgroundAdd1'
 import LandingPage from '@/Components/LandingPage'
 import Navbar from '@/Components/Navbar'
 import Trending from '@/Components/Trending'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { cubicBezier } from 'framer-motion'
 import OfferZone from '@/Components/OfferZone'
@@ -22,8 +22,16 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 
 const page = () => {
-  
-  const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll({
+      el: document.querySelector('.main'),
+      smooth: true,
+    });
+
+    return () => {
+      if (locomotiveScroll) locomotiveScroll.destroy();
+    };
+  }, []);
 
   return (
     <div className="main bg-[#26292c]">

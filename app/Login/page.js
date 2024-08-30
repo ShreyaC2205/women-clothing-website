@@ -38,7 +38,7 @@ const page = () => {
               <input type="email" name="userid" id="userid" placeholder={element[2]} className='w-full py-2 px-4 outline-none border-2 border-slate-200 bg-transparent text-sm rounded-full mb-2 text-slate-50 placeholder:text-sm placeholder:text-slate-300' />
               <span className='text-xs mb-3'>By continuing, you agree to Elegyn's <a href="#" className='text-slate-100 font-extrabold'>Terms of Use</a> and <a href="#" className='text-slate-100 font-extrabold'>Privacy Policy</a>.</span>
               <button className='rounded-md p-2  bg-[#B40001] text-sm text-slate-100 font-bold mb-4 border-2 border-slate-100 shadow-xl hover:bg-yellow-500 hover:text-gray-800'>{element[4]}</button>
-              <button onClick={Clicked} className='loginBTN text-slate-100 font-bold text-md'>{element[3]}</button>
+              <button onClick={Clicked} className='loginBTN text-slate-100 font-bold text-md mb-4'>{element[3]}</button>
             </div>
           </div>
         ))
