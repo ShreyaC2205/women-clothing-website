@@ -79,39 +79,3 @@ const BackgroundAd2 = () => {
 }
 
 export default BackgroundAd2
-
-// function ReverseCountdownTimer() {
-//   const [hours, setHours] = useState(3);
-//   const [minutes, setMinutes] = useState(0);
-//   const [seconds, setSeconds] = useState(0);
-
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       if (hours === 0 && minutes === 0 && seconds === 0) {
-//         clearInterval(timer);
-//         // Timer reached 0, you can perform any action here
-//       } else {
-//         if (seconds === 0) {
-//           if (minutes === 0) {
-//             setHours(prevHours => prevHours - 1);
-//             setMinutes(59);
-//           } else {
-//             setMinutes(prevMinutes => prevMinutes - 1);
-//           }
-//           setSeconds(59);
-//         } else {
-//           setSeconds(prevSeconds => prevSeconds - 1);
-//         }
-//       }
-//     }, 1000);
-
-//     return () => clearInterval(timer);
-//   }, [hours, minutes, seconds]);
-
-//   return (
-//     <div>
-//       <h1>Countdown Timer</h1>
-//       <p>{`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}</p>
-//     </div>
-//   );
-// }
