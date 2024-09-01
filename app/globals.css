@@ -8,6 +8,10 @@
     box-sizing: border-box;
     user-select: none;
 }
+:root {
+    --font-bodoni_Moda: 'Bodoni Moda', serif;
+    --font-bricolage_Grotesque: 'Bricolage Grotesque', serif;
+  }
 html,
 body {
     width: 100%;
@@ -127,7 +131,7 @@ body {
 }
 
 .ADtext {
-    font-family: var(--font-playfair_Display_SC);
+    font-family: var(--font-bodoni_Moda);
 }
 
 .Navi {
@@ -288,7 +292,7 @@ body {
 }
 
 .categH1 {
-    font-family: var(--font-raleway);
+    font-family: var(--font-bricolage_Grotesque);
 }
 
 .cateTitle {
@@ -480,7 +484,7 @@ body {
     font-weight: 700;
 }
 .Outfit1{
-    font-family: var(--font-poppins);
+    font-family: var(--font-nunito_Sans);
     font-weight: 500;
 }
 .Outfit2{
