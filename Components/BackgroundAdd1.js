@@ -34,15 +34,15 @@ const BackgroundAdd1 = () => {
       <div data-scroll data-scroll-section data-scroll-speed="-.6" className='relative w-[100%] h-[100vh] bg-[#26292c]' >
         <div className="imageBg absolute w-[80%] h-[80%] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
           <div className="texts absolute z-30 -translate-x-20 bottom-10 h-32 w-[34vw] overflow-hidden bg-gray-400/30 flex justify-center rounded-md">
-            <h1 className='ADtext absolute flex flex-col z-30 text-right top-32 uppercase'>
+            <h1 className='ADtext absolute flex flex-col z-30 text-right top-32 uppercase font-extralight'>
               <span className='text-[4vw]'>Casual wear</span>
               <span className='text-[2vw] -mt-3'>Upto 60% off</span>
             </h1>
-            <h1 className="ADtext absolute flex flex-col text-right top-32 uppercase">
+            <h1 className="ADtext absolute flex flex-col text-right top-32 uppercase font-extralight">
               <span className='text-[4vw]'>Winter wear</span>
               <span className='text-[2vw]'>Min 40% off</span>
             </h1>
-            <h1 className="ADtext absolute flex flex-col text-right top-32 uppercase">
+            <h1 className="ADtext absolute flex flex-col text-right top-32 uppercase font-extralight">
               <span className='text-[4vw]'>Western wear</span>
               <span className='text-[2vw]'>40-50% off</span>
             </h1>
