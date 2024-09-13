@@ -1,8 +1,13 @@
 import '@fortawesome/fontawesome-svg-core';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import Navbar from '@/Components/Navbar'
 config.autoAddCss =  false;
 
-import { Inter, Albert_Sans, Bodoni_Moda, Antonio, Alexandria, Bricolage_Grotesque, Anek_Tamil, Libre_Bodoni, Red_Rose, Tourney, Monoton, Anton, Big_Shoulders_Display, Cabin, Nunito_Sans, Outfit} from "next/font/google";
+export const metadata = {
+title: 'ELEGYN',
+description: "Woman's Clothing Website"
+}
+import { Inter, Albert_Sans, Playfair_Display, Antonio, Alexandria, Raleway, Anek_Tamil, Libre_Bodoni, Red_Rose, Tourney, Monoton, Anton, Big_Shoulders_Display, Cabin, Nunito_Sans, Outfit} from "next/font/google";
 import "./globals.css";
 
 const albert_Sans = Albert_Sans({
@@ -11,10 +16,10 @@ const albert_Sans = Albert_Sans({
   variable: "--font-albert_Sans"
 })
 
-const bodoni_Moda = Bodoni_Moda({
+const playfair_Display = Playfair_Display({
   subsets: ['latin'],
   weight: "400",
-  variable: "--font-bodoni_Moda"
+  variable: "--font-playfair_Display"
 })
 
 const antonio = Antonio({
@@ -29,10 +34,10 @@ const alexandria = Alexandria({
   variable: "--font-alexandria"
 })
 
-const bricolage_Grotesque = Bricolage_Grotesque({
+const raleway = Raleway({
   subsets: ['latin'],
   weight: "700",
-  variable: "--font-bricolage_Grotesque"
+  variable: "--font-raleway"
 })
 
 const anek_Tamil = Anek_Tamil({
@@ -96,20 +101,14 @@ const outfit = Outfit({
 })
 
 
-
-
-
-
-
-
-
 const inter = Inter({ subsets: ["latin"] });
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${albert_Sans.variable} ${bodoni_Moda.variable} ${antonio.variable} ${alexandria.variable} ${bricolage_Grotesque.variable} ${anek_Tamil.variable}  ${libre_Bodoni.variable} ${red_Rose.variable} ${tourney.variable} ${monoton.variable} ${anton.variable} ${big_Shoulders_Display.variable} ${cabin.variable} ${outfit.variable}`}>{children}</body>
+      <body className={`${inter.className} ${albert_Sans.variable} ${playfair_Display.variable} ${antonio.variable} ${alexandria.variable} ${raleway.variable} ${anek_Tamil.variable}  ${libre_Bodoni.variable} ${red_Rose.variable} ${tourney.variable} ${monoton.variable} ${anton.variable} ${big_Shoulders_Display.variable} ${cabin.variable} ${outfit.variable} ${nunito_Sans.variable}`}><Navbar/><main>{children}</main> 
+      </body>
     </html>
   );
 }

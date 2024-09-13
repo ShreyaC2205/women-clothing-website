@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, cubicBezier } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 
 const Coupons = () => {
     const [nextClick, setNextClick] = useState(false)
@@ -13,7 +14,7 @@ const Coupons = () => {
             const canvas = document.getElementById(canvasID);
             const ctx = canvas.getContext('2d');
 
-            const img = new Image();
+            const img = new window.Image();
             img.onload = function () {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -119,7 +120,7 @@ const Coupons = () => {
                     {[1, 2, 3, 4].map((index) => (
                         <div key={index} className='relative w-[16vw] h-[16vw] select-none'>
                             <div onClick={() => clickedCoupon(index)} className='absolute scratchCard w-full h-full rounded-xl overflow-hidden'>
-                                <img onClick={() => clickedCoupon(index)} className='w-[100%] h-[100%]  object-cover' src={`/IMG/Coupons/Coupon${index}.png`} alt='coupon' />
+                                <Image onClick={() => clickedCoupon(index)} className='w-[100%] h-[100%]  object-cover' src={`/IMG/Coupons/Coupon${index}.png`} alt='coupon' width={350} height={0} quality={100}/>
                             </div>
                             <canvas onClick={() => clickedCoupon(index)} id={`myCanvas${index}`} className='absolute rounded-xl overflow-hidden w-[16.1vw] h-[16.1vw] cursor-grab'></canvas>
                         </div>
@@ -129,7 +130,7 @@ const Coupons = () => {
                     {[5, 6, 7, 8].map((index) => (
                         <div key={index} className='relative w-[16vw] h-[16vw] select-none rounded-xl overflow-hidden'>
                             <div onClick={() => clickedCoupon(index)} className='absolute scratchCard w-full h-full '>
-                                <img onClick={() => clickedCoupon(index)} className='w-[100%] h-[100%] object-cover scratchCard' src={`/IMG/Coupons/Coupon${index}.png`} alt='coupon' />
+                                <Image onClick={() => clickedCoupon(index)} className='w-[100%] h-[100%] object-cover scratchCard' src={`/IMG/Coupons/Coupon${index}.png`} alt='coupon' width={350} height={0} quality={100}/>
                             </div>
                             <canvas onClick={() => clickedCoupon(index)} id={`myCanvas${index}`} className='rounded-xl absolute overflow-hidden w-[16.1vw] h-[16.1vw] cursor-grab'></canvas>
                         </div>
@@ -151,7 +152,7 @@ const Coupons = () => {
                     <div className="modal absolute bottom-20 left-1/2 -translate-x-1/2 w-[70%] h-[70%] flex justify-center items-center bg-black bg-opacity-50 p-2 select-none">
                         <div className="max-w-screen-sm w-full h-full relative">
                             <button onClick={closeModal} className="absolute top-4 right-4 text-white text-3xl focus:outline-none">&times;</button>
-                            <img className="max-w-full max-h-full" src={`/IMG/Coupons/Coupon${clicked}.png`} alt='coupon' />
+                            <Image className="max-w-full max-h-full" src={`/IMG/Coupons/Coupon${clicked}.png`} alt='coupon' width={350} height={0} quality={100}/>
                         </div>
                     </div>
                 )}

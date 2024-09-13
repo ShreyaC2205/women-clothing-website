@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <>
       <div className="overlay w-full h-screen bg-gradient-to-l from-slate-900 ... absolute hidden"></div>
-      <div style={{ transition: "width .8s" }} className='nav w-0 fixed right-0 h-[100vh] bg-gray-900 text-centers rounded-tl-xl rounded-bl-xl grid grid-rows-[20%_29%_29%_22%] select-none border-l-2 border-yellow-300'>
+      <nav style={{ transition: "width .8s" }} className='nav w-0 fixed right-0 h-[100vh] bg-gray-900 text-centers rounded-tl-xl rounded-bl-xl grid grid-rows-[20%_29%_29%_22%] select-none border-l-2 border-yellow-300'>
         <div style={{ transition: "opacity .5s" }} className='divv relative flex-col pl-6 pr-6 pt-3 z-50'>
           <span className='absolute text-slate-300 text-sm'>Hello,</span>
           <FontAwesomeIcon icon={faBell} className='absolute right-5 top-4 text-md text-slate-500' />
@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className='flex flex-col gap-[1.13vw] pt-[0.1vw]'>
             <FontAwesomeIcon icon={faPercent} className='absolute left-[2.2vw] top-[7.2vw] text-[0.7vw] text-gray-900' />
             {[faHouse, faList, faStar, faCertificate, faAward, faLightbulb].map((items, index) => {
-              return <FontAwesomeIcon key={index} icon={items} className={`text-[1vw] text-slate-500 ${index >= 2 && "text-[1.33vw] -mt-[0.4vw]"}`} />
+              return <FontAwesomeIcon key={index} icon={items} className={`text-[1vw] text-slate-500 ${index >= 2 && "text-[1.34vw] -mt-[0.4vw]"}`} />
             }
             )}
           </div>
@@ -86,8 +86,8 @@ const Navbar = () => {
           <button className="login absolute  top-24 pl-8 text-slate-100 bg-transparent rounded-md p-2 border border-slate-300 text-xs uppercase hover:text-black font-semibold overflow-hidden">Chat with us</button>
         </div>
         <FontAwesomeIcon style={{ transition: "all 0.2s" }} id='#arrow' onClick={btnClick} icon={faAnglesLeft} className='absolute text-xl -left-[3.5vw] top-[50%] translate-y-[-50%] text-[#26292c] z-50' />
-        <button style={{ transition: "all 0.5s" }} onClick={btnClick} className='btn Navi w-auto h-auto absolute -left-[5.1vw] top-[50%] translate-y-[-50%] bg-yellow-500 -rotate-90 text-md p-2 pt-6 rounded-t-xl hover:scale-[1.1] uppercase'>Navigation</button>
-      </div>
+        <button style={{ transition: "all 1s" }} onClick={btnClick} className='btn Navi w-auto h-auto absolute -left-[5.1vw] top-[50%] translate-y-[-50%] bg-yellow-500 -rotate-90 text-md p-2 pt-6 rounded-t-xl hover:scale-[1.1] uppercase'>Navigation</button>
+      </nav>
     </>
   )
 }

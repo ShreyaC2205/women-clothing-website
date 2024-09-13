@@ -1,8 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 
-
-
 const page = () => {
   const info1 = [["New User?", "SignUp", "Enter Mobile Number", "Existing User? LogIn", "CONTINUE", "85%", "/IMG/400offf.png"]]
   const info2 = [["", "Login", "Enter Email/Mobile Number", "", "REQUEST OTP", "50%"]]

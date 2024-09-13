@@ -8,10 +8,7 @@
     box-sizing: border-box;
     user-select: none;
 }
-:root {
-    --font-bodoni_Moda: 'Bodoni Moda', serif;
-    --font-bricolage_Grotesque: 'Bricolage Grotesque', serif;
-  }
+
 html,
 body {
     width: 100%;
@@ -131,7 +128,7 @@ body {
 }
 
 .ADtext {
-    font-family: var(--font-bodoni_Moda);
+    font-family: var(--font-playfair_Display);
 }
 
 .Navi {
@@ -292,7 +289,7 @@ body {
 }
 
 .categH1 {
-    font-family: var(--font-bricolage_Grotesque);
+    font-family: var(--font-raleway);
 }
 
 .cateTitle {

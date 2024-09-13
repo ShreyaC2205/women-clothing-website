@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect } from 'react'
 import { cubicBezier, motion } from 'framer-motion'
-// import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
 import { Timeline } from 'gsap/gsap-core'
@@ -38,21 +38,21 @@ const BackgroundAd2 = () => {
             <button className='w-auto h-auto rounded-[2.2vw] bg-red-600 px-4 p-2 text-center font-extrabold text-blue-300 adBtn cursor-pointer shadow-md shadow-gray-800 shadow-b-1 shadow-r-[2px] -shadow-spread-4 hover:bg-red-800'>SHOP NOW</button>
           </motion.div>
         </div>
-        <motion.div initial={{left:"22vw"}} whileInView={{left:"-26vw"}} transition={{ease:"easeInOut", duration:1}} className='relative mobImg w-[17vw] z-40'>
+        <motion.div initial={{left:"22vw"}} whileInView={{left:"-26vw"}} transition={{ease:"easeInOut", duration:1}} className='relative mobImg w-[17vw] z-40 '>
           <div className="absolute top-3 left-2 saleBG w-[94%] h-[95%] rounded-[2.6vw] -z-10">
-            <img className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2' src="/IMG/AD2/saleText.png" alt="sale Text" />
-            <img className='w-full h-full object-cover rounded-2xl' src="/IMG/AD2/saleBG6.jpeg" alt="saleBG" />
+            <Image className='absolute  top-[27%]  z-10 w-full h-auto' src="/IMG/AD2/saleText.png" alt="sale Text" width={200} height={0} quality={100}/>
+            <Image className=' rounded-2xl w-full h-full' src="/IMG/AD2/saleBG6.jpeg" alt="saleBG" width={500} height={0} quality={100}/>
           </div>
-          <div className='AnimImg z-30 w-full h-full absolute -bottom-2 opacity-0'>
-            <img  className='absolute left-16 h-full w-full' src="/IMG/AD2/adImg1.jpg" alt="adImg1" />
+          <div className='AnimImg z-30 w-full h-full absolute left-[20%] -bottom-2 opacity-0'>
+            <Image  className='absolute w-full h-full' src="/IMG/AD2/adImg1.jpg" alt="adImg1"  width={1500} height={0} quality={100}/>
           </div>
-          <div className='AnimImg z-30 h-[120%] w-[120%] absolute -left-10 -bottom-1 opacity-0'>
-            <img  className='absolute left-16 h-full w-full' src="/IMG/AD2/adImg2.jpg"  alt="adImg2" />
+          <div className='AnimImg z-30 h-[120%] w-[120%] absolute left-6 -bottom-1 opacity-0'>
+            <Image  className='absolute left-2 w-full h-full' src="/IMG/AD2/adImg2.jpg"  alt="adImg2" width={1500} height={0} quality={100}/>
           </div>
-          <div className='AnimImg z-30 w-full h-full absolute left-2 -bottom-2 opacity-0'>
-            <img className='absolute left-16 h-full w-full ' src="/IMG/AD2/adImg3.jpg"  alt="adImg3" />
+          <div className='AnimImg z-30 w-full h-full absolute left-16 -bottom-2 opacity-0'>
+            <Image className='absolute left-2 w-full h-full' src="/IMG/AD2/adImg3.jpg"  alt="adImg3" width={1500} height={0} quality={100}/>
           </div>
-          <img id='phoneBG' src="/IMG/phoneScreen.png" alt="mobile Img" className=' mobile' />
+          <Image id='phoneBG' src="/IMG/phoneScreen.png" alt="mobile Img" className=' mobile w-full h-full' width={230} height={0} quality={100}/>
         </motion.div>
         <div className=' overflow-hidden scrollText h-[100%] z-20 w-[100%] absolute  bottom-0 '>
           <div className="offerTextroll leading-[7vw] text-center">

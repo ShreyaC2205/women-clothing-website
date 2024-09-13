@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { cubicBezier, motion } from 'framer-motion'
 import { faPlus, faStar, faQuoteLeft, faQuoteRightAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
 
 const ContactUs = () => {
   const profiles = [["Pooja Gupta", "Absolutely love my new dress! The fit is perfect, and the quality exceeded my expectations. Will buy again!"], ["Kavita Desai", "The customer service team was very helpful when I had questions about sizing. They made shopping easy."], ["Ritu Tiwari", "Received so many compliments on my new jacket. Can't wait to shop here again for more fashionable items."], ["Sneha Joshi", "I've become a repeat customer because of the excellent quality and stylish designs that fit my taste perfectly."], ["Radhika Iyer", "Great value for the price. I feel like I got a designer item without breaking the bank. Very satisfied."], ["Sanya Verma", "The website is easy to navigate, and I found exactly what I was looking for quickly and hassle-free, great experience."], ["Meera Choudhury", "The colors of the clothes are vibrant and exactly as shown on the website. I'm impressed with the accuracy.Go for it!"], ["Diya Chatterjee", "Easy returns and exchanges made shopping stress-free. Their customer service team was really helpful too, Happy with the service."], ["Swati Sharma", "Shopping here is a treat. It's my go-to for updating my wardrobe each season with stylish and trendy pieces, Highly recommended."]]
@@ -71,7 +72,7 @@ const ContactUs = () => {
       <div className="relative containerFeature grid grid-cols-[1fr_1fr_1fr_1fr_1fr] gap-2 top-2 px-16">
         <div className="grid grid-cols-[1fr_1fr] place-items-center">
           <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5}} className="relative imgContain grayIMG ">
-            <img src="/IMG/bestPrice.jpg" alt="best price" className='w-[95%]' />
+            <Image src="/IMG/bestPrice.jpg" alt="best price" className='w-[95%]' width={500} height={0} quality={100}/>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400">
             <h1>High Quality</h1>
@@ -81,7 +82,7 @@ const ContactUs = () => {
 
         <div className="grid grid-cols-[1fr_1fr] place-items-center">
           <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="relative imgContain grayIMG ">
-            <img src="/IMG/easyreturn.png" alt="best price" className='w-[95%]' />
+            <Image src="/IMG/easyreturn.png" alt="best price" className='w-[95%]' width={500} height={0} quality={100}/>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400">
             <h1>Easy Returns</h1>
@@ -91,7 +92,7 @@ const ContactUs = () => {
 
         <div className="relative grid grid-cols-[1fr_1fr] place-items-center p-1">
           <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="relative imgContain grayIMG1 h-[100%] w-[96%] border-[0.29vw] border-[#696969] rounded-full flex justify-center items-center">
-            <img src="/IMG/tag.png" alt="easy return & exchange" className='relative w-[90%]  p-4' />
+            <Image src="/IMG/tag.png" alt="easy return & exchange" className='relative w-[90%]  p-4' width={500} height={0} quality={100}/>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400 left-3">
             <h1>20k <FontAwesomeIcon icon={faPlus} /> Orignal</h1>
@@ -101,7 +102,7 @@ const ContactUs = () => {
 
         <div className="relative grid grid-cols-[1fr_1fr] place-items-center p-1">
           <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className=" imgContain grayIMG border-[0.29vw] h-[95%] w-[93%] border-[#909090] rounded-full flex justify-center items-center overflow-hidden relative left-5">
-            <img src="/IMG/cod2.png" alt="Pay on Cash" className='relative w-[100%]' />
+            <Image src="/IMG/cod2.png" alt="Pay on Cash" className='relative w-[100%]' width={500} height={0} quality={100}/>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400 left-3">
             <h1>Pay on</h1>
@@ -111,7 +112,7 @@ const ContactUs = () => {
 
      <div className=" grid grid-cols-[1fr_1fr] place-items-center p-1">
           <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="imgContain grayIMG2 relative -left-1">
-            <img src="/IMG/fastDelivery.png" alt="best price" className='w-[95%]' />
+            <Image src="/IMG/fastDelivery.png" alt="best price" className='w-[95%]' width={500} height={0} quality={100}/>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400">
             <h1>Free Shipping</h1>
@@ -124,15 +125,15 @@ const ContactUs = () => {
         <div className=' px-6 pb-4 cabinFont2'>
           <div className="appStore w-[29vw]">
             <h1 className='text-lg  text-slate-200 mb-3'>EXPERIENCE ELEGYN APP ON MOBILE</h1>
-            <img src="/IMG/playStoreIcon.png" alt="get app" className='w-[85%]' />
+            <Image src="/IMG/playStoreIcon.png" alt="get app" className='w-[85%]' width={500} height={0} quality={100}/>
           </div>
           <div className="appStore w-[29vw]   mt-6">
             <h1 className='text-lg  mb-3 text-slate-200'>PAYMENT</h1>
-            <img src="/IMG/payment.png" alt="get app" className='w-[85%]' />
+            <Image src="/IMG/payment.png" alt="get app" className='w-[85%]' width={500} height={0} quality={100}/>
           </div>
           <div className="appStore w-[29vw]   mt-6">
             <h1 className='text-lg mb-3 text-slate-200'>CONNECT WITH US</h1>
-            <img src="/IMG/socialIcon.png" alt="get app" className='w-[85%]' />
+            <Image src="/IMG/socialIcon.png" alt="get app" className='w-[85%]' width={500} height={0} quality={100}/>
           </div>
         </div>
 
@@ -149,7 +150,7 @@ const ContactUs = () => {
           </div>
           <div className='chatBTN mt-9'>
             <h1 className=' text-slate-300 text-md cabinFont2 uppercase mb-3'>24x7 Chat Support</h1>
-            <button style={{ transition: "all 0.5s" }} className='relative login2 border-2 border-slate-300 p-2 rounded-md text-slate-300 cabinFont2 text-sm hover:text-gray-800 overflow-hidden z-20'>CHAT WITH US</button>
+            <button style={{ transition: "all 1s" }} className='relative login2 border-2 border-slate-300 p-2 rounded-md text-slate-300 cabinFont2 text-sm hover:text-gray-800 overflow-hidden z-20'>CHAT WITH US</button>
           </div>
           <h1 className='text-slate-300 text-md cabinFont2 uppercase mb-11 relative top-9'>Mail Us At</h1>
           <div className="mail flex items-center cabinFont1">
@@ -176,7 +177,7 @@ const ContactUs = () => {
           {profiles.map((element, index) => (
             <div key={index} className='relative  profiles min-w-[100%] max-w-[100%] h-full text-slate-300 flex flex-col items-center p-3'>
               <div className="relative profile w-[5vw] h-[5vw] grayIMG3">
-                <img src="/IMG/profile.png" alt="profile image" />
+                <Image src="/IMG/profile.png" alt="profile image" width={500} height={0} quality={100}/>
               </div>
               <h1 className='relative top-2'>{element[0]}</h1>
               <div className='relative flex text-yellow-500 gap-2 top-4'>
@@ -249,7 +250,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="absolute bottom-16 iconss w-auto left-1/2 -translate-x-1/2 h-[5vw] grayIMG3">
-        <img src="/IMG/icons2.png" alt="icons" className='h-[100%]' />
+        <Image src="/IMG/icons2.png" alt="icons" className='h-[100%] w-auto' width={500} height={0} quality={100} priority/>
       </div>
       <div className="absolute bottom-0 iconss w-[100%] h-[2vw] cabinFont font-bold bg-yellow-500 mt-2 flex justify-center items-center text-center">
         <span className='text-md'>{'\u00A9'}</span> <span className='text-sm'>2024 www.elegyn.com All rights reserved.</span>

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
 import { Timeline } from 'gsap/gsap-core'
+import Image from 'next/image'
 
 gsap.registerPlugin(useGSAP);
 
@@ -48,13 +49,13 @@ const BackgroundAdd1 = () => {
             </h1>
           </div>
           <div className='AdImg w-[0%] h-[100%] absolute overflow-hidden'>
-            <img src={"/IMG/adBG2.jpg"} alt="imgBG" />
+            <Image src={"/IMG/adBG2.jpg"} alt="imgBG" width={1800} height={0} quality={100}/>
           </div>
           <div className='AdImg w-[0%] h-[100%] absolute overflow-hidden'>
-            <img src={"/IMG/adBG.jpg"} alt="imgBG" />
+            <Image src={"/IMG/adBG.jpg"} alt="imgBG" width={1800} height={0} quality={100}/>
           </div>
           <div id='bg3' className='AdImg w-[0%] h-[100%] absolute overflow-hidden'>
-            <img src={"/IMG/adBG3.jpg"} alt="imgBG" />
+            <Image src={"/IMG/adBG3.jpg"} alt="imgBG" width={1800} height={0} quality={100}/>
           </div>
 
           <div className="fixed left-[10vw] -top-1 hide1 w-[17.8vw] h-8 bg-[#26292c]"></div>

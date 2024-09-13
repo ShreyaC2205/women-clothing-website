@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from './Card'
 import { motion, cubicBezier } from 'framer-motion'
+import Image from 'next/image'
 
 const OfferZone = () => {
-
     const arr = ["/IMG/Brands/adidas.png", "/IMG/Brands/dressberry.png", "/IMG/Brands/freakins.png", "/IMG/Brands/H&M.png", "/IMG/Brands/Levis.png", "/IMG/Brands/libas.png", "/IMG/Brands/Mango.png", "/IMG/Brands/only.png", "/IMG/Brands/puma.png", "/IMG/Brands/westside.png", "/IMG/Brands/zara.png", "/IMG/Brands/biba.png", "/IMG/Brands/pantaloons.png"]
     return (
         <div className='relative MainContainer w-[100%] h-[100vh] bg-[#A9E5FF] overflow-hidden rounded-tl-[2vw] rounded-tr-[2vw] rounded-br-[2vw] rounded-bl-[2vw] z-50' >
@@ -32,12 +32,12 @@ const OfferZone = () => {
                 <div className='relative w-[100%] bg-white h-12 pt-2 pb-2 flex top-1/2 -translate-y-1/2'>
                     <div className="brandStrip min-w-[100%] h-full flex items-center justify-around">
                         {arr.map((Element, index) => (
-                            <img className='h-[70%]' key={index} src={Element} alt="brands" />
+                            <Image className='h-[70%] w-auto' key={index} src={Element} alt="brands" width={500} height={0} quality={100}/>
                         ))}
                     </div>
                     <div className="brandStrip min-w-[100%] h-full flex items-center justify-around">
                         {arr.map((Element, index) => (
-                            <img className='h-[70%]' key={index} src={Element} alt="brands" />
+                            <Image className='h-[70%] w-auto' key={index} src={Element} alt="brands" width={500} height={0} quality={100}/>
                         ))}
                     </div>
                 </div>
