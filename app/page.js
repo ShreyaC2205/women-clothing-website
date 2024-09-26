@@ -19,6 +19,7 @@ import BestSeller from '@/Components/BestSeller'
 import NewArrival from '@/Components/NewArrival'
 import ContactUs from '@/Components/ContactUs'
 import LocomotiveScroll from 'locomotive-scroll';
+import Navbar from '@/Components/Navbar';
 
 
 
@@ -36,7 +37,7 @@ const page = () => {
 
   return (
     <div className="main bg-[#26292c]">
-      {/* <Navbar /> */}
+      <Navbar />
       <LandingPage />
       <Coupons />
       <BackgroundAd2 />

@@ -118,9 +118,14 @@ const Coupons = () => {
             <div className='absolute couponContainer w-[75%] min-h-[20vw]  bottom-20 left-1/2 -translate-x-1/2  flex rounded-xl overflow-hidden'>
                 <motion.div initial={{ x: "0" }} animate={nextClick ? { x: "-100%" } : { x: "0" }} transition={{ease:"easeInOut", duration:1}} className='CouponsScratch min-w-[100%] min-h-[100%] bg-[#FFC90D] flex items-center justify-around pl-10 pr-10'>
                     {[1, 2, 3, 4].map((index) => (
-                        <div key={index} className='relative w-[16vw] h-[16vw] select-none'>
-                            <div onClick={() => clickedCoupon(index)} className='absolute scratchCard w-full h-full rounded-xl overflow-hidden'>
-                                <Image onClick={() => clickedCoupon(index)} className='w-[100%] h-[100%]  object-cover' src={`/IMG/Coupons/Coupon${index}.png`} alt='coupon' width={350} height={0} quality={100}/>
+                        <div key={index} className='relative w-[16vw] h-[16vw] select-none rounded-xl overflow-hidden'>
+                            <div onClick={() => clickedCoupon(index)} className='absolute scratchCard w-[16vw] h-[16vw] overflow-hidden'>
+                                <Image onClick={() => clickedCoupon(index)} className='absolute object-cover' 
+                                src={`/IMG/Coupons/coupon${index}.png`} 
+                                alt='coupon' 
+                                fill
+                                sizes='50vw, 50vw' 
+                                quality={100}/>
                             </div>
                             <canvas onClick={() => clickedCoupon(index)} id={`myCanvas${index}`} className='absolute rounded-xl overflow-hidden w-[16.1vw] h-[16.1vw] cursor-grab'></canvas>
                         </div>
@@ -129,8 +134,13 @@ const Coupons = () => {
                 <motion.div initial={{ x: "0" }} animate={nextClick ? { x: "-100%" } : { x: "0" }} transition={{ease:"easeInOut", duration:1}} className='CouponsScratch  min-w-[100%] min-h-[100%] bg-[#A9E5FF] flex items-center justify-around pl-10 pr-10'>
                     {[5, 6, 7, 8].map((index) => (
                         <div key={index} className='relative w-[16vw] h-[16vw] select-none rounded-xl overflow-hidden'>
-                            <div onClick={() => clickedCoupon(index)} className='absolute scratchCard w-full h-full '>
-                                <Image onClick={() => clickedCoupon(index)} className='w-[100%] h-[100%] object-cover scratchCard' src={`/IMG/Coupons/Coupon${index}.png`} alt='coupon' width={350} height={0} quality={100}/>
+                            <div onClick={() => clickedCoupon(index)} className='absolute scratchCard w-[16vw] h-[16vw] overflow-hidden'>
+                                <Image onClick={() => clickedCoupon(index)} className='absolute object-cover' 
+                                src={`/IMG/Coupons/coupon${index}.png`} 
+                                alt='coupon' 
+                                fill
+                                sizes='50vw, 50vw' 
+                                quality={100}/>
                             </div>
                             <canvas onClick={() => clickedCoupon(index)} id={`myCanvas${index}`} className='rounded-xl absolute overflow-hidden w-[16.1vw] h-[16.1vw] cursor-grab'></canvas>
                         </div>
@@ -152,7 +162,7 @@ const Coupons = () => {
                     <div className="modal absolute bottom-20 left-1/2 -translate-x-1/2 w-[70%] h-[70%] flex justify-center items-center bg-black bg-opacity-50 p-2 select-none">
                         <div className="max-w-screen-sm w-full h-full relative">
                             <button onClick={closeModal} className="absolute top-4 right-4 text-white text-3xl focus:outline-none">&times;</button>
-                            <Image className="max-w-full max-h-full" src={`/IMG/Coupons/Coupon${clicked}.png`} alt='coupon' width={350} height={0} quality={100}/>
+                            <Image className="max-w-full max-h-full" src={`/IMG/Coupons/coupon${clicked}.png`} alt='coupon' width={350} height={350} quality={100}/>
                         </div>
                     </div>
                 )}

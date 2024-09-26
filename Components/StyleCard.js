@@ -53,18 +53,20 @@ const StyleCard = (props) => {
 
     const getProductProps = (index) => {
         return {
-            image: productData[`Coimg${index + 1}`], 
+            image: productData[`Coimg${index + 1}`],
             brandName: productData[`qbrand${index + 1}`],
             description: productData[`qdesc${index + 1}`],
             price: productData[`qprice${index + 1}`],
             offer: productData[`qoffer${index + 1}`],
             rating: productData[`qrating${index + 1}`],
         };
-};
+    };
     return (
         <div className="container w-[100%] h-[100%] relative co1 rounded-xl overflow-hidden shadow-[2px_2px_6px_gray]">
-            <Image src="/IMG/bg2.jpg" alt="bg" className='absolute z-10 w-[100%] h-[100%] object-cover' width={2000} height={0} quality={100}/>
-            <Image className='absolute w-[100%] h-[38.7vw] object-cover z-20' src={imageSec[currentImageIndex]} alt="pairIMG" width={2000} height={0} quality={100}/>
+            <div className="relative styleIMG w-[24vw] h-[39vw] overflow-hidden bg-red-500">
+                <Image src="/IMG/bg2.jpg" alt="bg" className='absolute z-10 w-[100%] h-[100%] object-cover object-top' fill sizes='100vw, 100vw' quality={100} />
+                <Image className='absolute w-[100%] h-[100%] object-cover z-20 object-top' src={imageSec[currentImageIndex]} alt="pairIMG" fill sizes='100vw, 100vw' quality={100} />
+            </div>
             {pairDiv.map((element, index) => (
                 <div
                     ref={pairRefs.current[index]}

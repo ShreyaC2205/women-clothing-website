@@ -33,7 +33,7 @@ const BackgroundAdd1 = () => {
   return (
     <>
       <div data-scroll data-scroll-section data-scroll-speed="-.6" className='relative w-[100%] h-[100vh] bg-[#26292c]' >
-        <div className="imageBg absolute w-[80%] h-[80%] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <div className="imageBg relative w-[80vw] h-[36vw] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
           <div className="texts absolute z-30 -translate-x-20 bottom-10 h-32 w-[34vw] overflow-hidden bg-gray-400/30 flex justify-center rounded-md">
             <h1 className='ADtext absolute flex flex-col z-30 text-right top-32 uppercase'>
               <span className='text-[4vw]'>Casual wear</span>
@@ -48,14 +48,23 @@ const BackgroundAdd1 = () => {
               <span className='text-[2vw]'>40-50% off</span>
             </h1>
           </div>
-          <div className='AdImg w-[0%] h-[100%] absolute overflow-hidden'>
-            <Image src={"/IMG/adBG2.jpg"} alt="imgBG" width={1800} height={0} quality={100}/>
+          <div className='AdImg w-[0%] h-[100%] absolute overflow-hidden top-0'>
+            <Image src={"/IMG/adBG2.jpg"} 
+            alt="imgBG" 
+            width={1536} height={691} 
+            quality={100}
+            loading="eager" 
+            priority />
           </div>
-          <div className='AdImg w-[0%] h-[100%] absolute overflow-hidden'>
-            <Image src={"/IMG/adBG.jpg"} alt="imgBG" width={1800} height={0} quality={100}/>
+          <div className='AdImg w-[0%] h-[100%] absolute overflow-hidden top-0'>
+            <Image src={"/IMG/adBG.jpg"} alt="imgBG" width={1536} height={691} quality={100}
+             loading="eager" 
+             priority />
           </div>
-          <div id='bg3' className='AdImg w-[0%] h-[100%] absolute overflow-hidden'>
-            <Image src={"/IMG/adBG3.jpg"} alt="imgBG" width={1800} height={0} quality={100}/>
+          <div id='bg3' className='AdImg w-[0%] h-[100%] absolute overflow-hidden top-0'>
+            <Image src={"/IMG/adBG3.jpg"} alt="imgBG" width={1536} height={691} quality={100}
+             loading="eager" 
+             priority />
           </div>
 
           <div className="fixed left-[10vw] -top-1 hide1 w-[17.8vw] h-8 bg-[#26292c]"></div>

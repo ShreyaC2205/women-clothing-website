@@ -423,6 +423,9 @@ body {
 .shIMG img{
     filter: drop-shadow(10px 0px 8px rgba(61, 61, 61, 0.863));
 }
+.shIMG2 img{
+    filter: drop-shadow(6px 0px 6px rgba(61, 61, 61, 0.616));
+}
 .mobile{
     filter: drop-shadow(2px 0px 2px rgba(78, 78, 78, 0.863));
 }

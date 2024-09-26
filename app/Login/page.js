@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const page = () => {
@@ -12,7 +13,9 @@ const page = () => {
   }
   return (
     <div className='relative w-[100%] h-[100vh]'>
-      <img src="/IMG/loginBG9.jpg" alt="bg img" className='w-[100%] h-[100%] object-cover object-top' />
+      <div className='relative loginIMG w-[100vw] h-[100vh]'>
+        <Image src="/IMG/loginBG9.jpg" alt="bg img" className='absolute w-[100%] h-[100%] object-cover object-top' fill sizes='300vw, 300vw' quality={100} />
+      </div>
       {state === 1 ? (
         info2.map((element, index) => (
           <div key={index} className={`absolute logInContainer w-[30%] h-[${element[5]}] bg-black/50 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-lg`}>
@@ -29,7 +32,9 @@ const page = () => {
       ) : (
         info1.map((element, index) => (
           <div key={index} className={`absolute logInContainer w-[30%] h-[${element[5]}] bg-black/50 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-lg`}>
-            <img src={element[6]} alt="coupon" className='relative w-[100%] -top-5' />
+            <div className="relative logCoupon w-[30vw] h-[18vw] -top-5">
+              <Image src={element[6]} alt="coupon" className='absolute w-[100%] h-[100%] object-contain' fill sizes='100vw, 100vw' quality={100} />
+            </div>
             <div key={index} className="infoLogin relative flex flex-col justify-center items-center px-10 text-slate-200 gap-2">
               <span className='text-xs text-slate-200'>{element[0]}</span>
               <h1 className='text-2xl mb-4 font-bold'>{element[1]}</h1>

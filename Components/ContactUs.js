@@ -71,28 +71,28 @@ const ContactUs = () => {
     <div data-scroll data-scroll-section data-scroll-speed="-.6" className='contactContain relative w-[100%] h-[200vh] py-4  bg-[#26292c] z-40'>
       <div className="relative containerFeature grid grid-cols-[1fr_1fr_1fr_1fr_1fr] gap-2 top-2 px-16">
         <div className="grid grid-cols-[1fr_1fr] place-items-center">
-          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5}} className="relative imgContain grayIMG ">
-            <Image src="/IMG/bestPrice.jpg" alt="best price" className='w-[95%]' width={500} height={0} quality={100}/>
+          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="relative imgContain grayIMG w-[9vw] h-[9vw]  overflow-hidden">
+            <Image src="/IMG/bestPrice.jpg" alt="best price" className='absolute w-[95%] object-contain' fill sizes='30vw, 30vw' quality={100} />
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400">
             <h1>High Quality</h1>
             <h1>Lowest Price</h1>
           </motion.div>
-    </div>
+        </div>
 
         <div className="grid grid-cols-[1fr_1fr] place-items-center">
-          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="relative imgContain grayIMG ">
-            <Image src="/IMG/easyreturn.png" alt="best price" className='w-[95%]' width={500} height={0} quality={100}/>
+          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="relative imgContain grayIMG w-[8.3vw] h-[8.3vw] overflow-hidden">
+            <Image src="/IMG/easyreturn.png" alt="best price" className='w-[95%]' fill sizes='30vw, 30vw' quality={100} />
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400">
             <h1>Easy Returns</h1>
             <h1>& Exchange</h1>
           </motion.div>
-    </div>
+        </div>
 
         <div className="relative grid grid-cols-[1fr_1fr] place-items-center p-1">
-          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="relative imgContain grayIMG1 h-[100%] w-[96%] border-[0.29vw] border-[#696969] rounded-full flex justify-center items-center">
-            <Image src="/IMG/tag.png" alt="easy return & exchange" className='relative w-[90%]  p-4' width={500} height={0} quality={100}/>
+          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="relative imgContain grayIMG1 w-[8vw] h-[8vw] border-[0.29vw] border-[#696969] rounded-full flex justify-center items-center  overflow-hidden">
+            <Image src="/IMG/tag.png" alt="easy return & exchange" className='relative w-[90%]  p-4' fill sizes='30vw, 30vw' quality={100} />
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400 left-3">
             <h1>20k <FontAwesomeIcon icon={faPlus} /> Orignal</h1>
@@ -101,8 +101,8 @@ const ContactUs = () => {
         </div>
 
         <div className="relative grid grid-cols-[1fr_1fr] place-items-center p-1">
-          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className=" imgContain grayIMG border-[0.29vw] h-[95%] w-[93%] border-[#909090] rounded-full flex justify-center items-center overflow-hidden relative left-5">
-            <Image src="/IMG/cod2.png" alt="Pay on Cash" className='relative w-[100%]' width={500} height={0} quality={100}/>
+          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className=" imgContain grayIMG border-[0.29vw] w-[8vw] h-[8vw] border-[#909090] rounded-full flex justify-center items-center relative left-5  overflow-hidden">
+            <Image src="/IMG/cod2.png" alt="Pay on Cash" className='relative w-[100%]' fill sizes='30vw, 30vw' quality={100} />
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400 left-3">
             <h1>Pay on</h1>
@@ -110,30 +110,51 @@ const ContactUs = () => {
           </motion.div>
         </div>
 
-     <div className=" grid grid-cols-[1fr_1fr] place-items-center p-1">
-          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="imgContain grayIMG2 relative -left-1">
-            <Image src="/IMG/fastDelivery.png" alt="best price" className='w-[95%]' width={500} height={0} quality={100}/>
+        <div className=" grid grid-cols-[1fr_1fr] place-items-center p-1">
+          <motion.div initial={{ x: "10vw" }} whileInView={{ x: "0vw" }} transition={{ ease: cubicBezier(.72, 0, .52, .90), duration: 1.5, delay: 1.5 }} className="imgContain grayIMG2 relative w-[8.2vw] h-[8.2vw] -left-1  overflow-hidden">
+            <Image src="/IMG/fastDelivery.png" alt="best price" className='w-[95%]' fill sizes='30vw, 30vw' quality={100} />
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "easeInOut", duration: 1, delay: 3.2 }} className="relative textF flex flex-col text-center text-[1.5vw] text-gray-400">
             <h1>Free Shipping</h1>
             <h1>Fast Delivery</h1>
           </motion.div>
-     </div>
+        </div>
       </div>
 
       <div className="socialSection grid grid-cols-[1fr_1fr_1fr] relative top-20 px-16">
         <div className=' px-6 pb-4 cabinFont2'>
-          <div className="appStore w-[29vw]">
+          <div className="relative appStore w-[29vw] h-[7vw] ">
             <h1 className='text-lg  text-slate-200 mb-3'>EXPERIENCE ELEGYN APP ON MOBILE</h1>
-            <Image src="/IMG/playStoreIcon.png" alt="get app" className='w-[85%]' width={500} height={0} quality={100}/>
+            <div className='relative w-[25.5vw] h-[4vw]'>
+              <Image src="/IMG/playStoreIcon.png"
+                alt="get app"
+                className='absolute object-contain'
+                fill
+                sizes='50vw, 50vw'
+                quality={100} />
+            </div>
           </div>
-          <div className="appStore w-[29vw]   mt-6">
+          <div className="relative appStore w-[29vw] h-[7vw]  mt-6">
             <h1 className='text-lg  mb-3 text-slate-200'>PAYMENT</h1>
-            <Image src="/IMG/payment.png" alt="get app" className='w-[85%]' width={500} height={0} quality={100}/>
+            <div className='relative w-[25.5vw] h-[5vw] '>
+              <Image src="/IMG/Payment.png"
+                alt="get app"
+                className='absolute object-contain'
+                fill
+                sizes='50vw,50vw'
+                quality={100} />
+            </div>
           </div>
-          <div className="appStore w-[29vw]   mt-6">
+          <div className="relative appStore w-[29vw] h-[7vw]  mt-6">
             <h1 className='text-lg mb-3 text-slate-200'>CONNECT WITH US</h1>
-            <Image src="/IMG/socialIcon.png" alt="get app" className='w-[85%]' width={500} height={0} quality={100}/>
+            <div className='relative w-[25.5vw] h-[5vw] '>
+              <Image src="/IMG/socialIcon.png"
+                alt="get app"
+                className='absolute object-contain'
+                fill
+                sizes='50vw,50vw'
+                quality={100} />
+            </div>
           </div>
         </div>
 
@@ -177,7 +198,12 @@ const ContactUs = () => {
           {profiles.map((element, index) => (
             <div key={index} className='relative  profiles min-w-[100%] max-w-[100%] h-full text-slate-300 flex flex-col items-center p-3'>
               <div className="relative profile w-[5vw] h-[5vw] grayIMG3">
-                <Image src="/IMG/profile.png" alt="profile image" width={500} height={0} quality={100}/>
+                <Image src="/IMG/profile.png" 
+                alt="profile image" 
+                fill
+                sizes='20vw, 20vw'
+                quality={100}
+                className='absolute object-contain' />
               </div>
               <h1 className='relative top-2'>{element[0]}</h1>
               <div className='relative flex text-yellow-500 gap-2 top-4'>
@@ -249,10 +275,16 @@ const ContactUs = () => {
           <p className='text-sm cursor-pointer'>Oversized Tshirt | Summer Dress | Cargo pants | Crop Tops | Partywear Dresses | Saree | Skirts | Gowns | Kurta Sets | Coords | Winter jacket | Indowestern dress | Lehenga | Nightsuits | Gym Wear | Blazer pant set| Trousers | Wide Leg Jeans | Tunics | Scarfs | Sweaters | Shrugs | Dungarees | Mini Dresses | Shorts | Shirts | Jumpsuits</p>
         </div>
       </div>
-      <div className="absolute bottom-16 iconss w-auto left-1/2 -translate-x-1/2 h-[5vw] grayIMG3">
-        <Image src="/IMG/icons2.png" alt="icons" className='h-[100%] w-auto' width={500} height={0} quality={100} priority/>
+      <div className="relative -bottom-24 iconss left-1/2 -translate-x-1/2 w-[27vw] h-[6vw] grayIMG3 ">
+        <Image src="/IMG/icons2.png" 
+        alt="icons" 
+        className='absolute object-contain' 
+        fill
+        sizes='40vw, 40vw'
+        quality={100} 
+        priority />
       </div>
-      <div className="absolute bottom-0 iconss w-[100%] h-[2vw] cabinFont font-bold bg-yellow-500 mt-2 flex justify-center items-center text-center">
+      <div className="absolute bottom-0 iconss w-[100%] h-[2vw] cabinFont font-bold  mt-2 flex justify-center items-center text-center bg-yellow-500">
         <span className='text-md'>{'\u00A9'}</span> <span className='text-sm'>2024 www.elegyn.com All rights reserved.</span>
       </div>
     </div >

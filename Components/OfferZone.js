@@ -11,7 +11,7 @@ const OfferZone = () => {
                 <div className="absolute cardsContain w-[96%] h-auto top-7 flex gap-4 justify-between">
                     <Card OfferImg="/IMG/tshirt.png" brandImg="/IMG/Brands/adidas.png" CardOffer1="T-shirt" CardOffer2="Min 40% Off" />
                     <Card OfferImg="/IMG/jumpsuit.png" brandImg="/IMG/Brands/dressberry.png" CardOffer1="Jumpsuits" CardOffer2="Min 24% Off" />
-                    <Card OfferImg="/IMG/jeans.jpg" brandImg="/IMG/Brands/levis.png" CardOffer1="Jeans" CardOffer2="Min 55% Off" />
+                    <Card OfferImg="/IMG/jeans.jpg" brandImg="/IMG/Brands/Levis.png" CardOffer1="Jeans" CardOffer2="Min 55% Off" />
                     <Card OfferImg="/IMG/sportwear.jpg" brandImg="/IMG/Brands/puma.png" CardOffer1="SportWear" CardOffer2="Min 33% Off" />
                 </div>
                 <div className="absolute cardsContain w-[96%] h-auto flex gap-4 justify-between top-1/2 translate-y-[6.6vw] z-20">
@@ -32,12 +32,12 @@ const OfferZone = () => {
                 <div className='relative w-[100%] bg-white h-12 pt-2 pb-2 flex top-1/2 -translate-y-1/2'>
                     <div className="brandStrip min-w-[100%] h-full flex items-center justify-around">
                         {arr.map((Element, index) => (
-                            <Image className='h-[70%] w-auto' key={index} src={Element} alt="brands" width={500} height={0} quality={100}/>
+                            <Image className='h-[70%] w-auto' key={index} src={Element} alt="brands" width={500} height={300} quality={100}/>
                         ))}
                     </div>
                     <div className="brandStrip min-w-[100%] h-full flex items-center justify-around">
                         {arr.map((Element, index) => (
-                            <Image className='h-[70%] w-auto' key={index} src={Element} alt="brands" width={500} height={0} quality={100}/>
+                            <Image className='h-[70%] w-auto' key={index} src={Element} alt="brands" width={500} height={300} quality={100}/>
                         ))}
                     </div>
                 </div>

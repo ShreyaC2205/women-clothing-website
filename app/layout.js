@@ -1,6 +1,6 @@
 import '@fortawesome/fontawesome-svg-core';
 import { config } from '@fortawesome/fontawesome-svg-core';
-import Navbar from '@/Components/Navbar'
+// import Navbar from '@/Components/Navbar'
 config.autoAddCss =  false;
 
 export const metadata = {
@@ -107,7 +107,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${albert_Sans.variable} ${playfair_Display.variable} ${antonio.variable} ${alexandria.variable} ${raleway.variable} ${anek_Tamil.variable}  ${libre_Bodoni.variable} ${red_Rose.variable} ${tourney.variable} ${monoton.variable} ${anton.variable} ${big_Shoulders_Display.variable} ${cabin.variable} ${outfit.variable} ${nunito_Sans.variable}`}><Navbar/><main>{children}</main> 
+      <body className={`${inter.className} ${albert_Sans.variable} ${playfair_Display.variable} ${antonio.variable} ${alexandria.variable} ${raleway.variable} ${anek_Tamil.variable}  ${libre_Bodoni.variable} ${red_Rose.variable} ${tourney.variable} ${monoton.variable} ${anton.variable} ${big_Shoulders_Display.variable} ${cabin.variable} ${outfit.variable} ${nunito_Sans.variable}`}><main>{children}</main> 
       </body>
     </html>
   );
